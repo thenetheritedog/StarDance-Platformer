@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
     InputAction moveAction;
     InputAction lookAction;
     InputAction jumpAction;
+    InputAction sprintAction;
     private PlayerManager playerManager;
     private PlayerMovement playerMovement;
     void Start()
@@ -15,6 +16,7 @@ public class InputManager : MonoBehaviour
         moveAction = InputSystem.actions.FindAction("Move");
         lookAction = InputSystem.actions.FindAction("Look");
         jumpAction = InputSystem.actions.FindAction("Jump");
+        sprintAction = InputSystem.actions.FindAction("Sprint");
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -27,7 +29,7 @@ public class InputManager : MonoBehaviour
 
     private void Movement()
     {
-        playerMovement.Movement(moveAction.ReadValue<Vector2>());
+        playerMovement.Movement(moveAction.ReadValue<Vector2>(), sprintAction.IsPressed());
     }
 
     private void CameraMovement()

@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     private InputManager input;
     public CameraManager camera;
     public bool grounded;
+    public LayerMask defaultLayer;
 
     private void Start()
     {

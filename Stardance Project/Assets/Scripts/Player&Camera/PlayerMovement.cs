@@ -9,13 +9,15 @@ public class PlayerMovement : MonoBehaviour
     private PlayerManager player;
     [SerializeField] private float gravity;
     [SerializeField] private float speed;
+    [SerializeField] private float sprintSpeed;
     [SerializeField] private float acceleration;
     [SerializeField] private float toGroundDis;
-    [SerializeField] private LayerMask ground;
+
     [SerializeField] private float jumpLength;
     [SerializeField] private float coyoteTime;
     [SerializeField] private float jumpHeight;
     private bool holdingJump;
+    private float gravityPull;
 
     private void Start()
     {
@@ -27,22 +29,22 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 velocity = rigidbody.linearVelocity;
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, toGroundDis * 1.25f, ground) && !holdingJump)
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, toGroundDis * 1.25f, player.defaultLayer) && !holdingJump)
         {
-            if (hit.distance < toGroundDis && !player.grounded)
+            if (hit.distance > toGroundDis && !player.grounded)
             {
                 if (holdingJump)
                 {
-                    velocity.y -= gravity * Time.deltaTime / 5;
+                    gravityPull -= gravity * Time.deltaTime / 5;
                 }
                 else
                 {
-                    velocity.y -= gravity * Time.deltaTime;
+                    gravityPull -= gravity * Time.deltaTime;
                 }
                 return;
             }
             player.grounded = true;
-            velocity.y = 0;
+            gravityPull = 0;
             Vector3 newPositionForSlopes = transform.position;
             newPositionForSlopes.y = hit.point.y + toGroundDis;
             transform.position = newPositionForSlopes;
@@ -52,25 +54,34 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(CoyoteTime());
             if (holdingJump)
             {
-                velocity.y -= gravity * Time.deltaTime / 5;
+                gravityPull -= gravity * Time.deltaTime / 5;
             }
             else
             {
-                velocity.y -= gravity * Time.deltaTime;
+                gravityPull -= gravity * Time.deltaTime;
             }
 
         }
+        velocity.y = gravityPull;
         rigidbody.linearVelocity = velocity;
 
 
     }
-    public void Movement(Vector2 moveVector)
+    public void Movement(Vector2 moveVector, bool sprint)
     {
         Vector3 velocity = moveVector.y * player.camera.transform.forward;
         velocity += moveVector.x * player.camera.transform.right;
-        velocity *= speed;
+
+        if (sprint)
+        {
+            velocity *= sprintSpeed;
+        }
+        else
+        {
+            velocity *= speed;
+        }
         velocity.y = rigidbody.linearVelocity.y;
-        rigidbody.linearVelocity = Vector3.Lerp(rigidbody.linearVelocity, velocity, acceleration * Time.deltaTime);
+        rigidbody.linearVelocity = Vector3.Lerp(rigidbody.linearVelocity, velocity , acceleration  * Time.deltaTime);
 
 
     }
@@ -84,7 +95,8 @@ public class PlayerMovement : MonoBehaviour
             holdingJump = true;
             StartCoroutine(JumpHold());
             Vector3 velocity = rigidbody.linearVelocity;
-            velocity.y = jumpHeight;
+            gravityPull = jumpHeight;
+            velocity.y = gravityPull;
             rigidbody.linearVelocity = velocity;
         }
         if (!jumpInput && holdingJump)
