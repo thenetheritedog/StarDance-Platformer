@@ -21,7 +21,7 @@ public class CameraManager : MonoBehaviour
         mainCamera = transform.GetChild(0).GetComponent<Camera>();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         
 
@@ -50,7 +50,6 @@ public class CameraManager : MonoBehaviour
 
     public void MoveCamera(Vector2 look)
     {
-        Debug.Log(look);
         Vector3 pivotTransform = Vector3.zero;
         pivotAngle += look.x * sensitivity;
         pivotTransform.y = pivotAngle;
