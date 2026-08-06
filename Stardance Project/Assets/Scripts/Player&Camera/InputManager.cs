@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     InputAction lookAction;
     InputAction jumpAction;
     InputAction sprintAction;
+    InputAction grappleAction;
+    InputAction glideAction;
     private PlayerManager playerManager;
     private PlayerMovement playerMovement;
     void Start()
@@ -17,6 +19,8 @@ public class InputManager : MonoBehaviour
         lookAction = InputSystem.actions.FindAction("Look");
         jumpAction = InputSystem.actions.FindAction("Jump");
         sprintAction = InputSystem.actions.FindAction("Sprint");
+        grappleAction = InputSystem.actions.FindAction("Attack");
+        glideAction = InputSystem.actions.FindAction("GlideTest");
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -25,6 +29,8 @@ public class InputManager : MonoBehaviour
         Movement();
         CameraMovement();
         Jump();
+        Grapple();
+        Glider();
     }
 
     private void Movement()
@@ -42,5 +48,19 @@ public class InputManager : MonoBehaviour
     {
         playerMovement.Jump(jumpAction.IsPressed());
      
+    }
+    private void Grapple()
+    {
+        if (grappleAction.IsPressed()) 
+        {
+            playerMovement.GrappleStart();
+        }
+    }
+    private void Glider()
+    {
+        if (glideAction.IsPressed())
+        {
+            playerManager.ResetLevel();
+        }
     }
 }

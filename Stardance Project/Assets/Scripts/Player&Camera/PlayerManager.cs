@@ -9,14 +9,22 @@ public class PlayerManager : MonoBehaviour
     public bool grounded;
     public LayerMask defaultLayer;
     public PlayerState playerState;
-
+    [SerializeField] private Vector3 spawn;
     private void Start()
     {
         camera = FindAnyObjectByType<CameraManager>();
         input = GetComponent<InputManager>();
         playerMovement = GetComponent<PlayerMovement>();
+        
 
         
+    }
+
+    public void ResetLevel()
+    {
+        playerState = PlayerState.Falling;
+        transform.position = spawn;
+        FindAnyObjectByType<GliderMove>().ResetGlider();
     }
 
     public enum PlayerState
@@ -27,6 +35,9 @@ public class PlayerManager : MonoBehaviour
         Jumping,
         Falling,
         WallRunning,
+        WallJumping,
+        Grapple,
+        Gliding,
     }
     
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     public GameObject pivot;
-    [SerializeField]private Camera mainCamera;
+    public Camera mainCamera;
     private PlayerManager playerManager;
     private float lookAngle;
     private float pivotAngle;
@@ -25,8 +25,8 @@ public class CameraManager : MonoBehaviour
     {
         
 
-        Vector3 newPos = playerManager.transform.position + playerRigidbody.linearVelocity;
-
+        Vector3 newPos = playerManager.transform.position + Vector3.ClampMagnitude( playerRigidbody.linearVelocity, 4f);
+        newPos.y = playerManager.transform.position.y;
         
 
         mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, defaultFov + playerRigidbody.linearVelocity.magnitude,5f * Time.deltaTime);
@@ -34,16 +34,18 @@ public class CameraManager : MonoBehaviour
         {
             newPos.y = Mathf.Lerp(pivot.transform.position.y, newPos.y, pivotAcceleration * Time.deltaTime / 4); ;
         }
-        pivot.transform.position = Vector3.Lerp(pivot.transform.position, newPos, pivotAcceleration * Time.deltaTime);
+        newPos = Vector3.Lerp(pivot.transform.position, newPos, pivotAcceleration * Time.deltaTime);
+        newPos.y = Mathf.Clamp(newPos.y, playerManager.transform.position.y -3, playerManager.transform.position.y + 3);
+        pivot.transform.position = newPos;
         
 
         RaycastHit hit;
         Vector3 cameraTransform = Vector3.zero;
-        cameraTransform.z = -defaultDistance;
+        cameraTransform.z = -defaultDistance +1;
         
         if (Physics.Raycast(transform.position, -transform.forward, out hit, defaultDistance, playerManager.defaultLayer))
         {
-            cameraTransform.z = -hit.distance;
+            cameraTransform.z = -hit.distance +1;
         }
         mainCamera.transform.localPosition = cameraTransform;
     }
