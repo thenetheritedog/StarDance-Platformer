@@ -13,36 +13,45 @@ public class CameraManager : MonoBehaviour
     private Rigidbody playerRigidbody;
     [SerializeField] private float defaultDistance;
     [SerializeField] private float defaultFov;
+    private ParticleSystem speedLines;
     void Start()
     {
         pivot = transform.parent.gameObject;   
         playerManager = FindAnyObjectByType<PlayerManager>();
         playerRigidbody = playerManager.gameObject.GetComponent<Rigidbody>();
         mainCamera = transform.GetChild(0).GetComponent<Camera>();
+        speedLines = mainCamera.transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
     private void LateUpdate()
     {
         
 
-        Vector3 newPos = playerManager.transform.position + Vector3.ClampMagnitude( playerRigidbody.linearVelocity, 4f);
-        newPos.y = playerManager.transform.position.y;
+        Vector3 newPos = playerManager.cameraPlayerPosition + Vector3.ClampMagnitude( playerRigidbody.linearVelocity, 4f);
+        newPos.y = playerManager.cameraPlayerPosition.y;
+        
+
         
 
         mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, defaultFov + playerRigidbody.linearVelocity.magnitude,5f * Time.deltaTime);
+        mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, defaultFov, 120);
         if (!playerManager.grounded)
         {
             newPos.y = Mathf.Lerp(pivot.transform.position.y, newPos.y, pivotAcceleration * Time.deltaTime / 4); ;
         }
         newPos = Vector3.Lerp(pivot.transform.position, newPos, pivotAcceleration * Time.deltaTime);
-        newPos.y = Mathf.Clamp(newPos.y, playerManager.transform.position.y -3, playerManager.transform.position.y + 3);
+        newPos.y = Mathf.Clamp(newPos.y, playerManager.cameraPlayerPosition.y -3, playerManager.cameraPlayerPosition.y + 3);
         pivot.transform.position = newPos;
         
 
         RaycastHit hit;
         Vector3 cameraTransform = Vector3.zero;
         cameraTransform.z = -defaultDistance +1;
-        
+        Vector3 pivotToPlayerVec = pivot.transform.position - playerManager.transform.position;
+        if (Physics.Raycast(pivot.transform.position, pivotToPlayerVec.normalized, out hit, pivotToPlayerVec.magnitude, playerManager.defaultLayer))
+        {
+            pivot.transform.position = playerManager.transform.position + pivotToPlayerVec.normalized * hit.distance;
+        }
         if (Physics.Raycast(transform.position, -transform.forward, out hit, defaultDistance, playerManager.defaultLayer))
         {
             cameraTransform.z = -hit.distance +1;
@@ -55,6 +64,7 @@ public class CameraManager : MonoBehaviour
         Vector3 pivotTransform = Vector3.zero;
         pivotAngle += look.x * sensitivity;
         pivotTransform.y = pivotAngle;
+        pivotTransform.z = playerManager.cameraPlayerRotation.z;
         pivot.transform.localRotation = Quaternion.Euler(pivotTransform);
         pivotTransform = Vector3.zero;
         lookAngle -= look.y * sensitivity;
@@ -62,5 +72,11 @@ public class CameraManager : MonoBehaviour
         pivotTransform.x = lookAngle;
         transform.localRotation = Quaternion.Euler(pivotTransform);
         
+    }
+    public void Reset()
+    {
+        transform.localEulerAngles = playerManager.cameraPlayerRotation;
+        mainCamera.fieldOfView = defaultFov;
+        pivot.transform.position = playerManager.cameraPlayerPosition;
     }
 }

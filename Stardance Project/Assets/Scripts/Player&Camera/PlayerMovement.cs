@@ -7,7 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rigidbody;
-    private Collider collider;
+
     private PlayerManager player;
     public GliderMove glider;
     [SerializeField] private float gravity;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float decceleration;
     [SerializeField] private float toGroundDis;
     [SerializeField] private float slopeSpeed;
+    [SerializeField] private ParticleSystem runSmokeParticles;
     private Vector3 oldVelocity;
     
 
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float grappleRadius;
     [SerializeField] private LayerMask grappleLayer;
     [SerializeField] private LayerMask gliderLayer;
+    [SerializeField] private LayerMask spikeLayer;
     [SerializeField] private float grappleSpeed;
     [SerializeField] private float grappleImpactDuration;
     private Vector3 originalGrappleDistance;
@@ -45,10 +47,19 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         player = GetComponent<PlayerManager>();
+        runSmokeParticles = GetComponentInChildren<ParticleSystem>();
     }
 
     private void FixedUpdate()
     {
+        Collider[] spikeChecks = Physics.OverlapCapsule(transform.position + transform.up/2 , transform.position - transform.up/2 , .5f, spikeLayer);
+
+        if (spikeChecks.Length > 0) 
+        {
+            player.ResetLevel();
+        }
+
+        
         Vector3 velocity = rigidbody.linearVelocity;
         if (player.playerState != PlayerManager.PlayerState.Grapple)
         {
@@ -58,28 +69,33 @@ public class PlayerMovement : MonoBehaviour
 
         if (Physics.BoxCast(transform.position, (Vector3.one - Vector3.up * 0.85f) / 2.9f, -transform.up, out groundHit, transform.rotation, toGroundDis + Vector3.Project(velocity * Time.fixedDeltaTime, -transform.up).magnitude, player.defaultLayer) && velocity.y <= 0)
         {
-            player.grounded = true;
-            gravityPull = 0;
-                
-            
-            //Vector3 newPositionForSlopes = transform.position;
-            //newPositionForSlopes.y = groundHit.point.y + toGroundDis;
-            //transform.position = newPositionForSlopes;
+            if (Vector3.Angle(Vector3.up, groundHit.normal) < 45)
+            {
+                player.grounded = true;
+                gravityPull = 0;
+            }
+
+
+            Vector3 newPositionForSlopes = transform.position;
+            newPositionForSlopes.y = groundHit.point.y + 1;
+            transform.position = newPositionForSlopes;
         }
         else if (player.grounded && player.playerState != PlayerManager.PlayerState.Falling)
         {
             if (Physics.BoxCast(transform.position, (Vector3.one - Vector3.up * 0.85f) / 2.9f, -transform.up, out groundHit, transform.rotation, (toGroundDis + Vector3.Project(velocity * Time.fixedDeltaTime, -transform.up).magnitude) * 1.25f, player.defaultLayer))
             {
-                
-                
-                player.grounded = true;
-                gravityPull = 0;
-                    
-                
-                
-                //Vector3 newPositionForSlopes = transform.position;
-                //newPositionForSlopes.y = groundHit.point.y + toGroundDis;
-                //transform.position = newPositionForSlopes;
+
+                if (Vector3.Angle(Vector3.up, groundHit.normal) < 45)
+                {
+                    player.grounded = true;
+                    gravityPull = 0;
+                }
+
+
+
+                Vector3 newPositionForSlopes = transform.position;
+                newPositionForSlopes.y = groundHit.point.y + 1;
+                transform.position = newPositionForSlopes;
             }
             else
             {
@@ -105,7 +121,10 @@ public class PlayerMovement : MonoBehaviour
                 Grappling();
                 break;
             case PlayerManager.PlayerState.Gliding:
-                rigidbody.linearVelocity = Vector3.zero;
+                if (glider != null)
+                {
+                    rigidbody.linearVelocity = glider.GetComponent<Rigidbody>().linearVelocity;
+                }
                 jumpAvailable = true;
                 break;
             default:
@@ -125,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Movement(Vector2 moveVector, bool sprint)
     {
-        
+        var smokeEmmisionModule = runSmokeParticles.emission;
         Vector3 directionOfFoward = player.camera.pivot.transform.forward;
         Vector3 directionOfRight = player.camera.pivot.transform.right;
         directionOfFoward.y = player.transform.forward.y;
@@ -162,12 +181,20 @@ public class PlayerMovement : MonoBehaviour
             newAcceleration = acceleration*10;
             movingState = PlayerManager.PlayerState.Standing;
         }
-        
-        
-        
+
+        if (velocity.magnitude > 0 && !disableMovement)
+        {
+            transform.forward = velocity.normalized;
+        }
+        else
+        {
+            transform.forward = transform.forward;
+        }
+
 
         if (player.grounded)
         {
+            
             player.playerState = movingState;
             if (disableMovement)
             {
@@ -181,23 +208,21 @@ public class PlayerMovement : MonoBehaviour
             velocity.z += groundHit.normal.z * slopeSpeed;
             velocity = Vector3.Lerp(rigidbody.linearVelocity, velocity, newAcceleration * Time.deltaTime);
             velocity = Vector3.ProjectOnPlane(velocity, groundHit.normal);
+
+
+
+            smokeEmmisionModule.rateOverTimeMultiplier = velocity.magnitude * 6;
             
-            
-            
-            
-            if (velocity.magnitude > 0)
-            {
-                transform.forward = velocity.normalized;
-            }
-            
-            
-            
+            player.animator.SetFloat("Speed", velocity.magnitude + 1);
+
+
             Debug.DrawRay(transform.position, groundHit.normal, Color.yellow);
             Debug.DrawRay(transform.position, Vector3.Project(Vector3.forward * gravity, groundHit.normal), Color.red);
 
         }
         else
         {
+            smokeEmmisionModule.rateOverTimeMultiplier = 0;
             if (disableMovement)
             {
                 return;
@@ -307,12 +332,12 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         Vector3 velocity = rigidbody.linearVelocity;
-        bool leftWallHit = Physics.Raycast(transform.position, -transform.right, out wallHit, .75f, player.defaultLayer);
+        bool leftWallHit = Physics.Raycast(transform.position, -transform.right, out wallHit, .75f * velocity.magnitude, player.defaultLayer);
         bool rightWallHit = false;
         isWallRunLeft = leftWallHit;
         if (!isWallRunLeft)
         {
-            rightWallHit = Physics.Raycast(transform.position, transform.right, out wallHit, .75f, player.defaultLayer);
+            rightWallHit = Physics.Raycast(transform.position, transform.right, out wallHit, .75f * velocity.magnitude, player.defaultLayer);
         }
 
 
@@ -322,7 +347,8 @@ public class PlayerMovement : MonoBehaviour
             disableMovement = false;
             if (!player.grounded)
             {
-                Jump(transform);
+                gravityPull = 0;
+                player.playerState = PlayerManager.PlayerState.Falling;
             }
 
 
@@ -330,12 +356,22 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             transform.forward = Vector3.Cross(wallHit.normal, transform.up);
+            player.cameraPlayerPosition += -transform.right;
+            Vector3 rotationOfCamera = player.cameraPlayerRotation;
+            
+            
             if (!isWallRunLeft)
             {
                 Vector3 otherway = transform.localEulerAngles;
                 otherway.y -= 180;
                 transform.localEulerAngles = otherway;
+                rotationOfCamera.z = Mathf.Lerp(rotationOfCamera.z, -15, Time.deltaTime * 5);
             }
+            else
+            {
+                rotationOfCamera.z = Mathf.Lerp(rotationOfCamera.z, 15, Time.deltaTime * 5);
+            }
+            player.cameraPlayerRotation = rotationOfCamera;
         }
         
         
@@ -344,6 +380,7 @@ public class PlayerMovement : MonoBehaviour
         gravityPull -= gravity * Time.deltaTime;
         velocity.y = gravityPull/5;
         rigidbody.linearVelocity = velocity;
+ 
         
 
     }
@@ -438,4 +475,6 @@ public class PlayerMovement : MonoBehaviour
             player.playerState = PlayerManager.PlayerState.Gliding;
         }
     }
+
+    
 }

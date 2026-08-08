@@ -62,8 +62,9 @@ public class GliderMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.GetComponent<PlayerManager>() == null) 
+        if (collision.gameObject.layer == 0) 
         {
+            ResetGlider();
             //FindAnyObjectByType<PlayerManager>().ResetLevel();
         }
         
