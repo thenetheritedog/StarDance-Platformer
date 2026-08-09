@@ -52,14 +52,12 @@ public class PlayerManager : MonoBehaviour
         Jumping,
         Falling,
         WallRunning,
+        WallSliding,
         WallJumping,
         Grapple,
         Gliding,
     }
 
-    public void PlayAnimation()
-    {
-        
-    }
+
     
 }

@@ -35,6 +35,7 @@ public class CameraManager : MonoBehaviour
 
         mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, defaultFov + playerRigidbody.linearVelocity.magnitude,5f * Time.deltaTime);
         mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, defaultFov, 120);
+
         if (!playerManager.grounded)
         {
             newPos.y = Mathf.Lerp(pivot.transform.position.y, newPos.y, pivotAcceleration * Time.deltaTime / 4); ;
@@ -46,13 +47,13 @@ public class CameraManager : MonoBehaviour
 
         RaycastHit hit;
         Vector3 cameraTransform = Vector3.zero;
-        cameraTransform.z = -defaultDistance +1;
+        cameraTransform.z = -defaultDistance + Mathf.Clamp(mainCamera.fieldOfView - defaultFov,0, 120 - defaultFov)/5;
         Vector3 pivotToPlayerVec = pivot.transform.position - playerManager.transform.position;
         if (Physics.Raycast(pivot.transform.position, pivotToPlayerVec.normalized, out hit, pivotToPlayerVec.magnitude, playerManager.defaultLayer))
         {
             pivot.transform.position = playerManager.transform.position + pivotToPlayerVec.normalized * hit.distance;
         }
-        if (Physics.Raycast(transform.position, -transform.forward, out hit, defaultDistance, playerManager.defaultLayer))
+        if (Physics.Raycast(transform.position, -transform.forward, out hit, -cameraTransform.z, playerManager.defaultLayer))
         {
             cameraTransform.z = -hit.distance +1;
         }

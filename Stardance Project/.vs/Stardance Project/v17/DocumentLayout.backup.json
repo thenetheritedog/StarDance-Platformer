@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\grapplepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\grapplepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|c:\\users\\frank\\documents\\github\\stardance platformer\\stardance project\\assets\\scripts\\glidermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\glidermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\player\u0026camera\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\u0026camera\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|c:\\users\\frank\\documents\\github\\stardance platformer\\stardance project\\assets\\scripts\\player\u0026camera\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\u0026camera\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\player\u0026camera\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\u0026camera\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\player\u0026camera\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\u0026camera\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\player\u0026camera\\cameramanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\u0026camera\\cameramanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\player\u0026camera\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\u0026camera\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\glidermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\glidermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\assets\\scripts\\grapplepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47AC7B9A-4A00-377C-EDDA-947326CA4D9F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\grapplepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Library\\PackageCache\\com.unity.render-pipelines.universal@ba24149c0920\\Runtime\\UniversalRenderPipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@ba24149c0920\\Runtime\\UniversalRenderPipeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,20 +46,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "UniversalRenderPipeline.cs",
+              "DocumentMoniker": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Library\\PackageCache\\com.unity.render-pipelines.universal@ba24149c0920\\Runtime\\UniversalRenderPipeline.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@ba24149c0920\\Runtime\\UniversalRenderPipeline.cs",
+              "ToolTip": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Library\\PackageCache\\com.unity.render-pipelines.universal@ba24149c0920\\Runtime\\UniversalRenderPipeline.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@ba24149c0920\\Runtime\\UniversalRenderPipeline.cs",
+              "ViewState": "AgIAAGEDAAAAAAAAAAAcwHQDAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T08:46:05.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "GrapplePoint.cs",
               "DocumentMoniker": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\GrapplePoint.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GrapplePoint.cs",
               "ToolTip": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\GrapplePoint.cs",
               "RelativeToolTip": "Assets\\Scripts\\GrapplePoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T09:57:00.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T09:57:00.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GliderMove.cs",
               "DocumentMoniker": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\GliderMove.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GliderMove.cs",
@@ -63,60 +79,56 @@
               "RelativeToolTip": "Assets\\Scripts\\GliderMove.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T03:00:49.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T03:00:49.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\InputManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\u0026Camera\\InputManager.cs",
               "ToolTip": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\InputManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\u0026Camera\\InputManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwCUAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T05:59:43.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-31T05:59:43.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "CameraManager.cs",
               "DocumentMoniker": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\CameraManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\u0026Camera\\CameraManager.cs",
               "ToolTip": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\CameraManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\u0026Camera\\CameraManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T05:58:40.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-31T05:58:40.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\u0026Camera\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\u0026Camera\\PlayerMovement.cs",
-              "ViewState": "AgIAAFsBAAAAAAAAAAAAAFoBAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAwKEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-31T05:57:06.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PlayerManager.cs",
               "DocumentMoniker": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\PlayerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\u0026Camera\\PlayerManager.cs",
               "ToolTip": "C:\\Users\\frank\\Documents\\Github\\StarDance Platformer\\Stardance Project\\Assets\\Scripts\\Player\u0026Camera\\PlayerManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\u0026Camera\\PlayerManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T05:55:12.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-31T05:55:12.538Z"
             }
           ]
         }
