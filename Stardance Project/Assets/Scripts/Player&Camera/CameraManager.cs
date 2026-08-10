@@ -8,7 +8,7 @@ public class CameraManager : MonoBehaviour
     private PlayerManager playerManager;
     private float lookAngle;
     private float pivotAngle;
-    [SerializeField] private float sensitivity;
+
     [SerializeField] private float pivotAcceleration;
     private Rigidbody playerRigidbody;
     [SerializeField] private float defaultDistance;
@@ -25,7 +25,7 @@ public class CameraManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        
+        if (Time.timeScale == 0) { return; }
 
         Vector3 newPos = playerManager.cameraPlayerPosition + Vector3.ClampMagnitude( playerRigidbody.linearVelocity, 4f);
         newPos.y = playerManager.cameraPlayerPosition.y;
@@ -63,12 +63,12 @@ public class CameraManager : MonoBehaviour
     public void MoveCamera(Vector2 look)
     {
         Vector3 pivotTransform = Vector3.zero;
-        pivotAngle += look.x * sensitivity;
+        pivotAngle += look.x * playerManager.sensitivity;
         pivotTransform.y = pivotAngle;
         pivotTransform.z = playerManager.cameraPlayerRotation.z;
         pivot.transform.localRotation = Quaternion.Euler(pivotTransform);
         pivotTransform = Vector3.zero;
-        lookAngle -= look.y * sensitivity;
+        lookAngle -= look.y * playerManager.sensitivity;
         lookAngle = Mathf.Clamp(lookAngle,-35f, 35f);
         pivotTransform.x = lookAngle;
         transform.localRotation = Quaternion.Euler(pivotTransform);

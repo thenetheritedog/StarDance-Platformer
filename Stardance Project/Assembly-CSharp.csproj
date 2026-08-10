@@ -63,11 +63,16 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player&amp;Camera\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player&amp;Camera\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\UIScript.cs" />
     <Compile Include="Assets\Scripts\GrapplePoint.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Player&amp;Camera\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\GliderMove.cs" />
     <Compile Include="Assets\Scripts\Player&amp;Camera\InputManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\UI Toolkit\InGameMenu.uxml" />
+    <None Include="Assets\UI Toolkit\StyleSheet.uss" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

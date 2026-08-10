@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float decceleration;
     [SerializeField] private float toGroundDis;
     [SerializeField] private float slopeSpeed;
+    [SerializeField] private float wallRunSpeed;
     [SerializeField] private ParticleSystem runSmokeParticles;
     private Vector3 oldVelocity;
     
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Time.timeScale == 0) { return; }
         Collider[] spikeChecks = Physics.OverlapCapsule(transform.position + transform.up/2 , transform.position - transform.up/2 , .5f, spikeLayer);
 
         if (spikeChecks.Length > 0) 
@@ -211,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (player.grounded)
         {
-            
+
             player.playerState = movingState;
             if (disableMovement)
             {
@@ -229,7 +231,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             smokeEmmisionModule.rateOverTimeMultiplier = velocity.magnitude * 6;
-            
+
             player.animator.SetFloat("Speed", velocity.magnitude + 1);
 
 
@@ -244,29 +246,70 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
             newAcceleration = decceleration;
+            if (player.playerState == PlayerManager.PlayerState.WallJumping)
+            {
+                newAcceleration = 0;
+            }
             velocity = Vector3.Lerp(rigidbody.linearVelocity, velocity, newAcceleration * Time.deltaTime);
             velocity.y = rigidbody.linearVelocity.y;
-            if ((Physics.Raycast(transform.position, transform.right, out wallHit, .75f, player.defaultLayer)
-                || Physics.Raycast(transform.position, -transform.right, out wallHit, .75f, player.defaultLayer)) && player.playerState != PlayerManager.PlayerState.WallRunning)
+            float distanceCloser = 2f;
+            // check if an object is both over a sphere and at the same y level as player
+            if (Physics.OverlapSphere(transform.position + Vector3.ProjectOnPlane(rigidbody.linearVelocity, Vector3.up) * Time.deltaTime, 0.6f, player.defaultLayer).Length > 0 &&
+                Physics.OverlapBox(transform.position + Vector3.ProjectOnPlane(rigidbody.linearVelocity, Vector3.up) *Time.deltaTime, new Vector3(0.6f, 0.01f, 0.6f), transform.rotation, player.defaultLayer).Length > 0)
             {
-                player.playerState = PlayerManager.PlayerState.WallRunning;
-                gravityPull = jumpHeight;
-                disableMovement = true;
-                player.animator.Play("Wall Run");
-                player.animator.SetBool("Jumping", false);
+                
+                bool leftWallHit = Physics.Raycast(transform.position, -transform.right, out wallHit, distanceCloser , player.defaultLayer);
+                bool rightWallHit = false;
+                isWallRunLeft = leftWallHit;
+                if (!isWallRunLeft)
+                {
+                    rightWallHit = Physics.Raycast(transform.position, transform.right, out wallHit, distanceCloser, player.defaultLayer);
+                }
+                
+                
+                
+
+                //Find wheather horizontal or forward
+                if (leftWallHit || rightWallHit)
+                {
+                    
+                    if (player.playerState != PlayerManager.PlayerState.WallRunning)
+                    {
+                        player.playerState = PlayerManager.PlayerState.WallRunning;
+                        gravityPull = rigidbody.linearVelocity.y;
+                        disableMovement = true;
+                        player.animator.Play("Wall Run");
+                        player.animator.SetBool("Jumping", false);
+                        distanceCloser = wallHit.distance;
+                    }
+
+                }
+                if (Physics.Raycast(transform.position, transform.forward, out wallHit, distanceCloser, player.defaultLayer))
+                {
+                    if (player.playerState != PlayerManager.PlayerState.WallSliding)
+                    {
+                        player.playerState = PlayerManager.PlayerState.WallSliding;
+                        gravityPull = rigidbody.linearVelocity.y;
+                        transform.forward = wallHit.normal;
+                        disableMovement = true;
+                        player.animator.Play("Wall Slide");
+                        player.animator.SetBool("Jumping", false);
+                    }
+                }
+                if (player.playerState == PlayerManager.PlayerState.WallRunning)
+                {
+                    wallRunSpeed = Vector3.ProjectOnPlane(rigidbody.linearVelocity, Vector3.up).magnitude;
+                    WallRun();
+                }
+
+                
             }
-            else if (Physics.Raycast(transform.position, transform.forward, out wallHit,.6f, player.defaultLayer))
-            {
-                player.playerState = PlayerManager.PlayerState.WallSliding;
-                gravityPull = rigidbody.linearVelocity.y;
-                transform.forward = wallHit.normal;
-                disableMovement = true;
-                player.animator.Play("Wall Slide");
-                player.animator.SetBool("Jumping", false);
-            }
-            
             transform.localEulerAngles = Vector3.up * transform.localEulerAngles.y;
 
+        }
+        if (disableMovement)
+        {
+            return;
         }
         rigidbody.linearVelocity = velocity;
         
@@ -280,9 +323,29 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(bool jumpInput)
     {
 
+        if ((player.playerState == PlayerManager.PlayerState.WallRunning || player.playerState == PlayerManager.PlayerState.WallSliding) && jumpInput)
+        {
+            Vector3 velocity = rigidbody.linearVelocity / 2;
 
+                velocity += wallHit.normal * (wallJumpAway + Vector3.ProjectOnPlane(velocity, Vector3.up).magnitude);
+
+            gravityPull = jumpHeight;
+            velocity.y = gravityPull;
+            player.playerState = PlayerManager.PlayerState.WallJumping;
+            disableMovement = true;
+            jumpAvailable = false;
+            player.grounded = false;
+            StartCoroutine(JumpHold(wallJumpLength));
+            rigidbody.linearVelocity = velocity;
+            transform.forward = velocity.normalized - velocity.normalized.y * Vector3.up;
+            player.animator.SetBool("Flip", !isWallRunLeft);
+            player.animator.SetBool("Jumping", true);
+
+
+        }
         if (jumpInput && jumpAvailable)
         {
+
             player.grounded = false;
             if (glider != null)
             {
@@ -312,22 +375,7 @@ public class PlayerMovement : MonoBehaviour
             player.playerState = PlayerManager.PlayerState.Falling;
             StopCoroutine(JumpHold());
         }
-        if ((player.playerState == PlayerManager.PlayerState.WallRunning || player.playerState == PlayerManager.PlayerState.WallSliding) && jumpInput)
-        {
-            Vector3 velocity = rigidbody.linearVelocity/2;
-            velocity += wallHit.normal * (wallJumpAway + Vector3.ProjectOnPlane(velocity,Vector3.up).magnitude);
-            gravityPull = jumpHeight;
-            player.playerState = PlayerManager.PlayerState.WallJumping;
-            disableMovement = true;
-            jumpAvailable = false;
-            StartCoroutine(JumpHold(wallJumpLength));
-            rigidbody.linearVelocity = velocity;
-            transform.forward = velocity.normalized - velocity.normalized.y * Vector3.up;
-            player.animator.SetBool("Flip", !isWallRunLeft);
-            player.animator.SetBool("Jumping", true);
-
-
-        }
+        
        
     }
     IEnumerator CoyoteTime()
@@ -370,23 +418,35 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         Vector3 velocity = rigidbody.linearVelocity;
-        bool leftWallHit = Physics.Raycast(transform.position, -transform.right, out wallHit, .75f * velocity.magnitude, player.defaultLayer);
+        bool leftWallHit = false;
         bool rightWallHit = false;
-        isWallRunLeft = leftWallHit;
+        Vector3 oldAngleOfWall = wallHit.normal;
         if (!isWallRunLeft)
         {
-            rightWallHit = Physics.Raycast(transform.position, transform.right, out wallHit, .75f * velocity.magnitude, player.defaultLayer);
+            rightWallHit = Physics.Raycast(transform.position, transform.right, out wallHit, (velocity.magnitude + 1), player.defaultLayer);
+        }
+        else
+        {
+            leftWallHit = Physics.Raycast(transform.position, -transform.right, out wallHit, (velocity.magnitude + 1), player.defaultLayer);
+        }
+        if (Vector3.Angle(oldAngleOfWall, wallHit.normal) > 45)
+        {
+            player.playerState = PlayerManager.PlayerState.Falling;
+            player.animator.Play("Fall");
+            disableMovement = false;
+            return;
         }
 
 
-
-        if (!rightWallHit && !leftWallHit)
+        if ((!rightWallHit && !leftWallHit))
         {
             disableMovement = false;
+            
             if (!player.grounded)
             {
                 gravityPull = 0;
                 player.playerState = PlayerManager.PlayerState.Falling;
+                player.animator.Play("Fall");
             }
 
 
@@ -415,7 +475,7 @@ public class PlayerMovement : MonoBehaviour
         
         
         velocity.y = 0f;
-        velocity = transform.forward * velocity.magnitude;
+        velocity = transform.forward * wallRunSpeed;
         gravityPull -= gravity * Time.deltaTime;
         velocity.y = gravityPull/5;
         rigidbody.linearVelocity = velocity;
@@ -426,15 +486,17 @@ public class PlayerMovement : MonoBehaviour
     private void WallSlide()
     {
 
-        if (!Physics.Raycast(transform.position ,-transform.forward, out wallHit ,0.75f, player.defaultLayer))
+        
+        if (player.grounded)
         {
-            player.playerState = PlayerManager.PlayerState.Falling;
+            player.playerState = PlayerManager.PlayerState.Standing;
             disableMovement = false;
             return;
         }
-        else if (player.grounded)
+        else if (!Physics.Raycast(transform.position, -transform.forward, out wallHit, 0.75f, player.defaultLayer))
         {
-            player.playerState = PlayerManager.PlayerState.Standing;
+            player.playerState = PlayerManager.PlayerState.Falling;
+            player.animator.Play("Fall");
             disableMovement = false;
             return;
         }
@@ -475,6 +537,7 @@ public class PlayerMovement : MonoBehaviour
         Collider[] checkForPassing = Physics.OverlapSphere(transform.position, 1f, grappleLayer, QueryTriggerInteraction.Collide);
         if (checkForPassing.Length == 0)
             return;
+        transform.position = checkForPassing[0].transform.position;
         CheckGlider(checkForPassing[0]);
         if (player.playerState == PlayerManager.PlayerState.Gliding)
         {
@@ -485,7 +548,10 @@ public class PlayerMovement : MonoBehaviour
         {
             grapplePoint.GetComponent<Collider>().enabled = false;
             GrapplePoint grappleScript = grapplePoint.GetComponent<GrapplePoint>();
-            transform.forward = grappleScript.actualForward;
+            if (grappleScript.makesYouLookFoward)
+            {
+                transform.forward = grappleScript.actualForward;
+            }
             grappleScript.StartCoroutine(grappleScript.DelayUse());
             grapplePoint = null;
             if (grappleScript.wallRunGrapple)
@@ -493,10 +559,24 @@ public class PlayerMovement : MonoBehaviour
                 player.playerState = PlayerManager.PlayerState.WallRunning;
                 player.animator.Play("Wall Run");
                 player.animator.SetBool("Jumping", false);
+                wallRunSpeed = grappleSpeed;
+                rigidbody.linearVelocity = transform.forward * wallRunSpeed;
+                bool leftWallHit = Physics.Raycast(transform.position, -transform.right, out wallHit, 0.75f, player.defaultLayer);
+                bool rightWallHit = false;
+                isWallRunLeft = leftWallHit;
+                player.animator.SetBool("Flip", true);
+                if (!isWallRunLeft)
+                {
+                    rightWallHit = Physics.Raycast(transform.position, transform.right, out wallHit, 0.75f, player.defaultLayer);
+                    player.animator.SetBool("Flip", false);
+                }
                 WallRun();
                 return;
             }
             disableMovement = false;
+            gravityPull = jumpHeight;
+            rigidbody.linearVelocity = rigidbody.linearVelocity/2 + Vector3.up * gravityPull;
+            player.animator.Play("Jump");
             StartCoroutine(JumpHold(grappleImpactDuration));
             
         }

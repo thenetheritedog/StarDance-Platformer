@@ -1,0 +1,55 @@
+.unity-button {
+    font-size: 57px;
+    background-color: rgb(255, 255, 255);
+    -unity-text-outline-color: rgb(0, 0, 0);
+    -unity-text-outline-width: 0;
+    color: rgb(0, 0, 0);
+    -unity-font-style: bold;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-width: 13px;
+    border-right-width: 13px;
+    border-bottom-width: 13px;
+    border-left-width: 13px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: auto;
+    max-width: none;
+    align-self: center;
+    flex-direction: row;
+    width: 0%;
+    flex-grow: 1;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out-back;
+}
+
+.unity-slider {
+    font-size: 51px;
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius: 33px;
+    border-top-right-radius: 33px;
+    border-bottom-right-radius: 33px;
+    border-bottom-left-radius: 33px;
+    border-top-width: 11px;
+    border-right-width: 11px;
+    border-bottom-width: 11px;
+    border-left-width: 11px;
+    -unity-font-style: bold;
+}
+
+.unity-button:hover {
+    scale: 1.1 1.1;
+    translate: 0 -10%;
+    rotate: 2deg;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out-back;
+}

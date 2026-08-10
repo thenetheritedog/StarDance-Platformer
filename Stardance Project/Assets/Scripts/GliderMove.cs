@@ -36,7 +36,6 @@ public class GliderMove : MonoBehaviour
 
 
 
-        Debug.Log(speed);
         Debug.DrawRay(transform.position, moveVector, Color.blue);
         player.transform.position = transform.position - transform.up;
         
@@ -44,6 +43,7 @@ public class GliderMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (Time.timeScale == 0) { return; }
         speed = Mathf.Lerp(speed, baseSpeed, turnSpeed * Time.deltaTime);
         rb.linearVelocity = direction;
         if (player.GetComponent<PlayerMovement>().glider != this)

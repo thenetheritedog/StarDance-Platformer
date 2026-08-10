@@ -7,12 +7,14 @@ public class GrapplePoint : MonoBehaviour
     private Collider colliderOfGrapple;
     private RectTransform rectTransform;
     public Vector3 actualForward;
+    public bool makesYouLookFoward;
     public bool wallRunGrapple;
 
     void Start()
     {
         mainCamera = FindAnyObjectByType<Camera>();
         actualForward = transform.forward;
+        
         rectTransform = GetComponent<RectTransform>();
         colliderOfGrapple = GetComponent<Collider>();
 
@@ -36,5 +38,10 @@ public class GrapplePoint : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         colliderOfGrapple .enabled = true;
+    }
+
+    public void ResetGrapple()
+    {
+        colliderOfGrapple.enabled = true;
     }
 }

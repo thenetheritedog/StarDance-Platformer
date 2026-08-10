@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -12,23 +13,37 @@ public class PlayerManager : MonoBehaviour
     public LayerMask defaultLayer;
     public PlayerState playerState;
     [SerializeField] private Vector3 spawn;
+    [SerializeField] private UIDocument pauseMenu;
     public Animator animator;
+    
+    public float sensitivity;
     private void Start()
     {
         camera = FindAnyObjectByType<CameraManager>();
         input = GetComponent<InputManager>();
         playerMovement = GetComponent<PlayerMovement>();
+        pauseMenu = FindAnyObjectByType<UIDocument>();
+        pauseMenu.gameObject.SetActive(false);
+        spawn = transform.position;
 
 
-        
+
+
+
     }
 
     private void Update()
     {
+        if (Time.timeScale == 0f) 
+        {
+            
+            return; 
+        }
         cameraPlayerPosition = transform.position;
         Vector3 baseAngles = camera.pivot.transform.localEulerAngles;
         baseAngles.z = 0f;
         cameraPlayerRotation = Vector3.Lerp(cameraPlayerRotation, baseAngles, Time.deltaTime * 3);
+        
 }
 
     public void ResetLevel()
@@ -41,6 +56,10 @@ public class PlayerManager : MonoBehaviour
         FindAnyObjectByType<GliderMove>().ResetGlider();
         camera.Reset();
         GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        foreach (var grapple in FindObjectsOfType<GrapplePoint>())
+        {
+            grapple.ResetGrapple();
+        }
     }
 
     public enum PlayerState
@@ -57,6 +76,13 @@ public class PlayerManager : MonoBehaviour
         Gliding,
     }
 
-
+    public void OpenMenu()
+    {
+        pauseMenu.gameObject.SetActive(!pauseMenu.gameObject.activeSelf);
+        Time.timeScale = pauseMenu.gameObject.activeSelf ? 0f : 1f;
+        if (Time.timeScale == 1f) 
+            input.ChangeLockState();
+        
+    }
     
 }
