@@ -51,7 +51,7 @@ public class InputManager : MonoBehaviour
 
     private void Jump()
     {
-        playerMovement.Jump(jumpAction.IsPressed());
+        playerMovement.Jump(jumpAction.IsPressed(), moveAction.ReadValue<Vector2>());
 
     }
     private void Grapple()

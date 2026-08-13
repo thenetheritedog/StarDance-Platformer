@@ -28,8 +28,8 @@ public class GliderMove : MonoBehaviour
         moveVector = rotation * moveVector;
         moveVector = Vector3.Lerp(moveVector.normalized, player.camera.transform.forward, 0.5f).normalized;
         
-        direction = Vector3.ProjectOnPlane(moveVector, Vector3.up).normalized * moveVector.magnitude * (1f - moveVector.normalized.y) * speed;
-        direction.y = -gravity * (1 - moveVector.y) * 2;
+        direction = Vector3.ProjectOnPlane(moveVector, Vector3.up).normalized * moveVector.magnitude * (1f - moveVector.normalized.y) * speed/2;
+        direction.y = -gravity * (1 - moveVector.y) * 4;
         direction = Vector3.Lerp(rb.linearVelocity, direction, turnSpeed * Time.deltaTime);
         transform.forward = direction.normalized;
 
@@ -65,19 +65,17 @@ public class GliderMove : MonoBehaviour
         if (collision.gameObject.layer == 0) 
         {
             ResetGlider();
-            //FindAnyObjectByType<PlayerManager>().ResetLevel();
+           // FindAnyObjectByType<PlayerManager>().ResetLevel();
         }
         
     }
 
     public void ResetGlider()
     {
-        
-        
-        GameObject instance = Instantiate(instancePrefab);
-        instance.GetComponent<GliderMove>().spawner = spawner;
-        instance.transform.position = spawner.transform.position;
-        instance.transform.forward = spawner.transform.forward;
-        Destroy(gameObject);
+
+        speed = baseSpeed;
+        direction = spawner.transform.forward * speed;
+        transform.position = spawner.transform.position;
+        transform.forward = spawner.transform.forward;
     }
 }

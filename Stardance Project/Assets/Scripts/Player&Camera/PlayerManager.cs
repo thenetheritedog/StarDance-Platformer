@@ -49,6 +49,7 @@ public class PlayerManager : MonoBehaviour
     public void ResetLevel()
     {
         playerState = PlayerState.Falling;
+        
         grounded = false;
         cameraPlayerPosition = transform.position;
         cameraPlayerRotation = Vector3.zero;
@@ -83,6 +84,11 @@ public class PlayerManager : MonoBehaviour
         if (Time.timeScale == 1f) 
             input.ChangeLockState();
         
+    }
+
+    public void Win()
+    {
+        ResetLevel();
     }
     
 }
