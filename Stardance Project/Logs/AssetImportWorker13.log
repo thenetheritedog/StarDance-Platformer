@@ -2671,3 +2671,35 @@ Memory consumption went from 159.1 MB to 155.4 MB.
 Total: 7.292000 ms (FindLiveObjects: 0.790200 ms CreateObjectMapping: 0.355100 ms MarkObjects: 4.270700 ms  DeleteObjects: 1.875200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 910.343552 seconds.
+  path: Assets/Resources/Levels/2/1.prefab
+  artifactKey: Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Levels/2/1.prefab using Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1d0565143f98d5adbc128b80e9f1438') in 0.4653511 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 144
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.726847 seconds.
+  path: Assets/Resources/Levels/2/1.prefab
+  artifactKey: Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Levels/2/1.prefab using Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d848de9b7315bdc3977d7f96c04cd29') in 0.0157659 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 122
+
+========================================================================
+Received Import Request.
+  Time since last request: 479.622859 seconds.
+  path: Assets/Resources/Levels/2/1.prefab
+  artifactKey: Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Levels/2/1.prefab using Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e7181fb3246b56205df2574c56576c32') in 0.0139945 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 129
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.285432 seconds.
+  path: Assets/Resources/Levels/2/1.prefab
+  artifactKey: Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Levels/2/1.prefab using Guid(3e9b9d19383048f4184033225f993f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1635931c74179213f2292346a41f329c') in 0.0142348 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 136
+

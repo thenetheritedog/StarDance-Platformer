@@ -377,3 +377,11 @@ Memory consumption went from 145.1 MB to 140.8 MB.
 Total: 10.828800 ms (FindLiveObjects: 0.843000 ms CreateObjectMapping: 0.840400 ms MarkObjects: 6.433500 ms  DeleteObjects: 2.711100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 29185.571950 seconds.
+  path: Assets/Resources/Levels/2/2.prefab
+  artifactKey: Guid(87af1becfecaec44ea35f8a78f5a0007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Levels/2/2.prefab using Guid(87af1becfecaec44ea35f8a78f5a0007) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c06e5b79cc98369f545c56dbbff96377') in 0.4911764 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 73
+
