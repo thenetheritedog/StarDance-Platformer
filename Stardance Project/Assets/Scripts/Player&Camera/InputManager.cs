@@ -10,6 +10,9 @@ public class InputManager : MonoBehaviour
     InputAction grappleAction;
     InputAction glideAction;
     InputAction menuAction;
+    InputAction nextLevelAction;
+    InputAction nextFolderAction;
+    InputAction testLevelAction;
     private PlayerManager playerManager;
     private PlayerMovement playerMovement;
     void Start()
@@ -23,6 +26,9 @@ public class InputManager : MonoBehaviour
         grappleAction = InputSystem.actions.FindAction("Attack");
         glideAction = InputSystem.actions.FindAction("GlideTest");
         menuAction = InputSystem.actions.FindAction("Menu");
+        nextLevelAction = InputSystem.actions.FindAction("NextLevel");
+        nextFolderAction = InputSystem.actions.FindAction("NextFolder");
+        testLevelAction = InputSystem.actions.FindAction("TestLevel");
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -36,6 +42,7 @@ public class InputManager : MonoBehaviour
         Jump();
         Grapple();
         Glider();
+        playerManager.ChangeLevelDebug(nextLevelAction.WasPressedThisFrame(), nextFolderAction.WasPressedThisFrame(), testLevelAction.WasPressedThisFrame());
     }
 
     private void Movement()

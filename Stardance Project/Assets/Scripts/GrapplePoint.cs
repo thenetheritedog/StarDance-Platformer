@@ -37,7 +37,7 @@ public class GrapplePoint : MonoBehaviour
     public IEnumerator DelayUse()
     {
         yield return new WaitForSeconds(4f);
-        colliderOfGrapple .enabled = true;
+        colliderOfGrapple.enabled = true;
     }
 
     public void ResetGrapple()

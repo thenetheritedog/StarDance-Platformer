@@ -13,6 +13,7 @@ public class GliderMove : MonoBehaviour
     [SerializeField] private Vector3 direction;
     [SerializeField] private float slowDown;
     [SerializeField] private float maxSpeed;
+    [SerializeField] private bool gliderCollisionResetFalse;
     private Rigidbody rb;
 
     private void Start()
@@ -28,13 +29,14 @@ public class GliderMove : MonoBehaviour
         moveVector = rotation * moveVector;
         moveVector = Vector3.Lerp(moveVector.normalized, player.camera.transform.forward, 0.5f).normalized;
         
-        direction = Vector3.ProjectOnPlane(moveVector, Vector3.up).normalized * moveVector.magnitude * (1f - moveVector.normalized.y) * speed/2;
-        direction.y = -gravity * (1 - moveVector.y) * 4;
-        direction = Vector3.Lerp(rb.linearVelocity, direction, turnSpeed * Time.deltaTime);
+        direction = Vector3.ProjectOnPlane(moveVector, Vector3.up).normalized * moveVector.magnitude * (1f - moveVector.normalized.y) * baseSpeed/2;
+        direction.y = -gravity * (1 - moveVector.y/2) * 2;
+        speed = Mathf.Lerp(rb.linearVelocity.magnitude, direction.magnitude, turnSpeed * Time.deltaTime);
+        direction = Vector3.Lerp(rb.linearVelocity, direction, turnSpeed * Time.deltaTime).normalized * speed;
         transform.forward = direction.normalized;
 
 
-
+        player.transform.forward = transform.forward;
 
         Debug.DrawRay(transform.position, moveVector, Color.blue);
         player.transform.position = transform.position - transform.up;
@@ -44,14 +46,16 @@ public class GliderMove : MonoBehaviour
     private void FixedUpdate()
     {
         if (Time.timeScale == 0) { return; }
-        speed = Mathf.Lerp(speed, baseSpeed, turnSpeed * Time.deltaTime);
+        
         rb.linearVelocity = direction;
         if (player.GetComponent<PlayerMovement>().glider != this)
         {
+            
             Vector3 moveVector = Vector3.ProjectOnPlane(transform.forward, Vector3.up);
             direction = Vector3.ProjectOnPlane(moveVector, Vector3.up).normalized * moveVector.magnitude * (1f - moveVector.normalized.y) * speed;
             direction.y = -gravity * (1 + moveVector.normalized.y);
-            direction = Vector3.Lerp(rb.linearVelocity, direction, turnSpeed * Time.deltaTime);
+            speed = Mathf.Lerp(rb.linearVelocity.magnitude, baseSpeed, turnSpeed * Time.deltaTime);
+            direction = Vector3.Lerp(rb.linearVelocity, direction, turnSpeed * Time.deltaTime).normalized * speed;
             transform.forward = direction.normalized;
 
 
@@ -62,10 +66,9 @@ public class GliderMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == 0) 
+        if (collision.gameObject.layer == 0 && !gliderCollisionResetFalse) 
         {
-            ResetGlider();
-           // FindAnyObjectByType<PlayerManager>().ResetLevel();
+            FindAnyObjectByType<PlayerManager>().ResetLevel();
         }
         
     }
@@ -76,6 +79,6 @@ public class GliderMove : MonoBehaviour
         speed = baseSpeed;
         direction = spawner.transform.forward * speed;
         transform.position = spawner.transform.position;
-        transform.forward = spawner.transform.forward;
+        transform.forward = spawner.transform.forward; 
     }
 }

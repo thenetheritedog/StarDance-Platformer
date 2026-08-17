@@ -124,13 +124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
   instancePrefab: {fileID: 2046433964935357512}
-  baseSpeed: 17.9
-  speed: 30.06
-  turnSpeed: 0.81
-  gravity: 4.11
+  baseSpeed: 13.6
+  speed: 15.8
+  turnSpeed: 8.6
+  gravity: 2.62
   direction: {x: 0, y: 0, z: 0}
   slowDown: 1.33
   maxSpeed: 127.6
+  gliderCollisionResetFalse: 0
 --- !u!54 &2431450568623401528
 Rigidbody:
   m_ObjectHideFlags: 0
