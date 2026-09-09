@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float grappleSpeed;
     [SerializeField] private float grappleImpactDuration;
     private Vector3 originalGrappleDistance;
+    public GameObject lockOn;
 
     private void Start()
     {
@@ -53,12 +54,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (grapplePoint != null)
+        {
+            lockOn.SetActive(true);
+            lockOn.transform.position = Camera.main.WorldToScreenPoint(grapplePoint.transform.position);
+            lockOn.transform.localScale = Vector3.Lerp(lockOn.transform.localScale, Vector3.one, Time.deltaTime * 10) + (Vector3.one -lockOn.transform.localScale)/10;
+        }
+        else
+        {
+            lockOn.transform.localScale = Vector3.Lerp(lockOn.transform.localScale, Vector3.zero, Time.deltaTime * 15);
+        }
         if (Time.timeScale == 0) { return; }
         Collider[] spikeChecks = Physics.OverlapCapsule(transform.position + transform.up / 2, transform.position - transform.up / 2, .5f, spikeLayer);
 
         if (spikeChecks.Length > 0)
         {
-            player.ResetLevel();
+            player.StartCoroutine(player.ResetLevel());
         }
 
 
@@ -189,11 +200,6 @@ public class PlayerMovement : MonoBehaviour
         if (sprint && moveVector.magnitude > 0)
         {
             velocity *= sprintSpeed;
-            if (velocity.magnitude < rigidbody.linearVelocity.magnitude && speed < rigidbody.linearVelocity.magnitude)
-            {
-                newAcceleration = decceleration;
-
-            }
             movingState = PlayerManager.PlayerState.Running;
         }
         else if (moveVector.magnitude > 0)
@@ -292,7 +298,7 @@ public class PlayerMovement : MonoBehaviour
 
 
                 //Find wheather horizontal or forward
-                if (leftWallHit || rightWallHit)
+                if ((leftWallHit || rightWallHit) && Vector3.ProjectOnPlane(Vector3.ProjectOnPlane(rigidbody.linearVelocity, Vector3.up), wallHit.normal).magnitude > 4f)
                 {
 
                     if (player.playerState != PlayerManager.PlayerState.WallRunning)
@@ -658,7 +664,6 @@ public class PlayerMovement : MonoBehaviour
 
             distanceAway = targetDirection.magnitude;
             grapplePoint = target.gameObject;
-            Debug.Log("GrappleFound");
 
 
         }
@@ -666,8 +671,8 @@ public class PlayerMovement : MonoBehaviour
         {
             grapplePoint = null;
         }
-
         
+
     }
 
     public void CheckGlider(Collider collision)

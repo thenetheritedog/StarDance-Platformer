@@ -23,9 +23,8 @@ public class CameraManager : MonoBehaviour
         speedLines = mainCamera.transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
-        if (Time.timeScale == 0) { return; }
 
         Vector3 newPos = playerManager.cameraPlayerPosition + Vector3.ClampMagnitude( playerRigidbody.linearVelocity, 4f);
         newPos.y = playerManager.cameraPlayerPosition.y;
@@ -33,14 +32,14 @@ public class CameraManager : MonoBehaviour
 
         
 
-        mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, defaultFov + playerRigidbody.linearVelocity.magnitude,5f * Time.deltaTime);
+        mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, defaultFov + playerRigidbody.linearVelocity.magnitude,5f * Time.unscaledDeltaTime);
         mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, defaultFov, 120);
 
         if (!playerManager.grounded)
         {
-            newPos.y = Mathf.Lerp(pivot.transform.position.y, newPos.y, pivotAcceleration * Time.deltaTime / 4); ;
+            newPos.y = Mathf.Lerp(pivot.transform.position.y, newPos.y, pivotAcceleration * Time.unscaledDeltaTime / 4); ;
         }
-        newPos = Vector3.Lerp(pivot.transform.position, newPos, pivotAcceleration * Time.deltaTime);
+        newPos = Vector3.Lerp(pivot.transform.position, newPos, pivotAcceleration * Time.unscaledDeltaTime);
         newPos.y = Mathf.Clamp(newPos.y, playerManager.cameraPlayerPosition.y -3, playerManager.cameraPlayerPosition.y + 3);
         pivot.transform.position = newPos;
         

@@ -61,14 +61,26 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.60f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Dithering\Dithering.cs" />
     <Compile Include="Assets\Scripts\Player&amp;Camera\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player&amp;Camera\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\Pixelation\PixelationRenderFeature.cs" />
     <Compile Include="Assets\Scripts\UIScript.cs" />
+    <Compile Include="Assets\Scripts\Pixelation\PixelationController.cs" />
+    <Compile Include="Assets\Scripts\Dithering\DitheringRenderFeature.cs" />
     <Compile Include="Assets\Scripts\Spike.cs" />
+    <Compile Include="Assets\Scripts\Fog\FogController.cs" />
     <Compile Include="Assets\Scripts\GrapplePoint.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Fog\FogRenderFeature.cs" />
+    <Compile Include="Assets\Scripts\Pixelation\Pixelation.cs" />
+    <Compile Include="Assets\Scripts\CRT\CRTRenderFeature.cs" />
     <Compile Include="Assets\Scripts\Player&amp;Camera\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\CRT\CRTEffectController.cs" />
+    <Compile Include="Assets\Scripts\Fog\Fog.cs" />
+    <Compile Include="Assets\Scripts\Dithering\DitheringController.cs" />
     <Compile Include="Assets\Scripts\GliderMove.cs" />
+    <Compile Include="Assets\Scripts\CRT\Crt.cs" />
     <Compile Include="Assets\Scripts\Player&amp;Camera\InputManager.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,9 +89,11 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\UI Toolkit\InGameMenu.uxml" />
+    <None Include="Assets\Materials\Texture Pack\License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\UI Toolkit\StyleSheet.uss" />
+    <None Include="Assets\UI Toolkit\TitleScreen.uxml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -1193,6 +1207,10 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityWakatime">
+      <HintPath>Library\ScriptAssemblies\UnityWakatime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Collections.Editor">

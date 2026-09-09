@@ -1,0 +1,1560 @@
+Using pre-set license
+Built from '6000.0/respin/6000.0.60f1-f02d6f9f9009' branch; Version is '6000.0.60f1 (61dfb374e36f) revision 6414259'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32682 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2026-09-08T03:09:15Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.60f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker9
+-projectPath
+C:/Users/frank/Documents/Github/StarDance Platformer/Stardance Project
+-logFile
+Logs/AssetImportWorker9.log
+-srvPort
+64689
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/frank/Documents/Github/StarDance Platformer/Stardance Project
+C:/Users/frank/Documents/Github/StarDance Platformer/Stardance Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [15680]  Target information:
+
+Player connection [15680]  * "[IP] 10.0.0.136 [Port] 0 [Flags] 2 [Guid] 3744663527 [EditorId] 3744663527 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-G03H8AT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15680]  * "[IP] 26.71.94.48 [Port] 0 [Flags] 2 [Guid] 3744663527 [EditorId] 3744663527 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-G03H8AT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15680]  * "[IP] 10.147.18.62 [Port] 0 [Flags] 2 [Guid] 3744663527 [EditorId] 3744663527 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-G03H8AT) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [15680] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [15680] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 1.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.60f1 (61dfb374e36f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.60f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/frank/Documents/Github/StarDance Platformer/Stardance Project/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   NVIDIA
+    VRAM:     12115 MB
+    Driver:   32.0.15.9579
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.60f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.60f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.60f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.60f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.60f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.60f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005132 seconds.
+- Loaded All Assemblies, in  0.354 seconds
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.289 seconds
+Domain Reload Profiling: 640ms
+	BeginReloadAssembly (125ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (136ms)
+		LoadAssemblies (121ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (133ms)
+			TypeCache.Refresh (132ms)
+				TypeCache.ScanAssembly (119ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (290ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (251ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (42ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (49ms)
+			ProcessInitializeOnLoadAttributes (107ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.802 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+<HackaTime> Initializing...
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+WakaTime.Plugin:Initialize () (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:76)
+WakaTime.Plugin:.cctor () (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:41)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs Line: 76)
+
+<HackaTime> Sending heartbeat...
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+WakaTime.Plugin/<SendHeartbeat>d__29:MoveNext () (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:144)
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start<WakaTime.Plugin/<SendHeartbeat>d__29> (WakaTime.Plugin/<SendHeartbeat>d__29&)
+WakaTime.Plugin:SendHeartbeat (bool)
+WakaTime.Plugin:Initialize () (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:78)
+WakaTime.Plugin:.cctor () (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:41)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs Line: 144)
+
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Stardance Project
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.704 seconds
+Domain Reload Profiling: 1500ms
+	BeginReloadAssembly (179ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (535ms)
+		LoadAssemblies (410ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (229ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (148ms)
+			BuildScriptInfoCaches (49ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (704ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (530ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (122ms)
+			ProcessInitializeOnLoadAttributes (316ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+<HackaTime> Got response
+{"id":2716361301,"user_id":27195,"branch":"main","category":"coding","dependencies":[],"editor":"unity","entity":"Unsaved Scene","language":"unity","machine":null,"operating_system":null,"project":"Stardance Project","type":"file","user_agent":"unity-hackatime","line_additions":null,"line_deletions":null,"lineno":null,"lines":null,"cursorpos":null,"project_root_count":null,"time":1788836992.0,"is_write":false,"created_at":"2026-09-08T03:09:18.400Z","updated_at":"2026-09-08T03:09:18.400Z","fields_hash":"b5c6b63fe6326a46aa5112d0500cc854","source_type":"direct_entry","ip_address":"2601:600:8280:6b00:5d1e:6bf0:57c3:b9dd","deleted_at":null,"ja4_id":22,"ai_model":null,"ai_session":null,"ai_subscription_plan":null,"ai_input_tokens":null,"ai_output_tokens":null,"ai_prompt_length":null,"ai_line_changes":null,"human_line_changes":null}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+WakaTime.Plugin/<SendHeartbeat>d__29:MoveNext () (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:187)
+System.Runtime.CompilerServices.AsyncMethodBuilderCore/MoveNextRunner:InvokeMoveNext (object)
+System.Threading.ExecutionContext:RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool)
+System.Threading.ExecutionContext:Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool)
+System.Runtime.CompilerServices.AsyncMethodBuilderCore/MoveNextRunner:Run ()
+System.Threading.Tasks.AwaitTaskContinuation:InvokeAction (object)
+System.Threading.Tasks.AwaitTaskContinuation:RunCallback (System.Threading.ContextCallback,object,System.Threading.Tasks.Task&)
+System.Threading.Tasks.SynchronizationContextAwaitTaskContinuation:Run (System.Threading.Tasks.Task,bool)
+System.Threading.Tasks.Task:FinishContinuations ()
+System.Threading.Tasks.Task:FinishStageThree ()
+System.Threading.Tasks.Task`1<bool>:TrySetResult (bool)
+System.Threading.Tasks.TaskCompletionSource`1<bool>:TrySetResult (bool)
+WakaTime.Plugin/<>c__DisplayClass29_0:<SendHeartbeat>b__0 (UnityEngine.AsyncOperation) (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:176)
+UnityEngine.AsyncOperation:InvokeCompletionEvent ()
+
+(Filename: ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs Line: 187)
+
+<HackaTime> Sent heartbeat!
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+WakaTime.Plugin/<SendHeartbeat>d__29:MoveNext () (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:203)
+System.Runtime.CompilerServices.AsyncMethodBuilderCore/MoveNextRunner:InvokeMoveNext (object)
+System.Threading.ExecutionContext:RunInternal (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool)
+System.Threading.ExecutionContext:Run (System.Threading.ExecutionContext,System.Threading.ContextCallback,object,bool)
+System.Runtime.CompilerServices.AsyncMethodBuilderCore/MoveNextRunner:Run ()
+System.Threading.Tasks.AwaitTaskContinuation:InvokeAction (object)
+System.Threading.Tasks.AwaitTaskContinuation:RunCallback (System.Threading.ContextCallback,object,System.Threading.Tasks.Task&)
+System.Threading.Tasks.SynchronizationContextAwaitTaskContinuation:Run (System.Threading.Tasks.Task,bool)
+System.Threading.Tasks.Task:FinishContinuations ()
+System.Threading.Tasks.Task:FinishStageThree ()
+System.Threading.Tasks.Task`1<bool>:TrySetResult (bool)
+System.Threading.Tasks.TaskCompletionSource`1<bool>:TrySetResult (bool)
+WakaTime.Plugin/<>c__DisplayClass29_0:<SendHeartbeat>b__0 (UnityEngine.AsyncOperation) (at ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs:176)
+UnityEngine.AsyncOperation:InvokeCompletionEvent ()
+
+(Filename: ./Library/PackageCache/com.daniel-geo.unityhackatime@5ac210a9a287/Editor/Plugin.cs Line: 203)
+
+Unloading 6465 unused Assets / (4.1 MB). Loaded Objects now: 7194.
+Memory consumption went from 135.0 MB to 130.9 MB.
+Total: 9.619300 ms (FindLiveObjects: 0.822100 ms CreateObjectMapping: 1.160200 ms MarkObjects: 4.770900 ms  DeleteObjects: 2.864900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 27084.422504 seconds.
+  path: Assets/Resources/Levels/1/5.prefab
+  artifactKey: Guid(15b1499904d2ba14f8578e7d05132837) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Resources/Levels/1/5.prefab using Guid(15b1499904d2ba14f8578e7d05132837) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '000ce501367544feb54bf24aeab42a43') in 0.1516164 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 47
+
+========================================================================
+Received Import Request.
+  Time since last request: 151.046613 seconds.
+  path: Assets/Prefabs/Lava Effect.prefab
+  artifactKey: Guid(957a45375305a974eb3a2d128c82eff7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Lava Effect.prefab using Guid(957a45375305a974eb3a2d128c82eff7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '46ef87db3876579db54eb6eedeada306') in 0.021357 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 1189.972415 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_20-128x128.png
+  artifactKey: Guid(de746642fbf719542b454d7d6791e17e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_20-128x128.png using Guid(de746642fbf719542b454d7d6791e17e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '61eac3e81ec6daec7d2063bd1711ed5d') in 0.0402575 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_15-128x128.png
+  artifactKey: Guid(9612d03dea1905b4892f5aed32abb525) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_15-128x128.png using Guid(9612d03dea1905b4892f5aed32abb525) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ee90d25e99891f4300362c1c65e4d92b') in 0.0108785 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_06-128x128.png
+  artifactKey: Guid(d946f161cd7768445a9792a80f06c998) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_06-128x128.png using Guid(d946f161cd7768445a9792a80f06c998) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7cb26304cd55be4383339e68d56faf0b') in 0.0096742 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_20-128x128.png
+  artifactKey: Guid(061eb9f8e1f80b04aafec2ae1fd07a30) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_20-128x128.png using Guid(061eb9f8e1f80b04aafec2ae1fd07a30) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '172b12acc23ac2597d879318b4734799') in 0.0180588 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_17-128x128.png
+  artifactKey: Guid(1b0dbd9f2406d92428a36ba515e0b184) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_17-128x128.png using Guid(1b0dbd9f2406d92428a36ba515e0b184) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd05184ad03af4466f65d37b1b2361c20') in 0.0077583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_13-128x128.png
+  artifactKey: Guid(e7f11afee5cd8084b8263644ab770f23) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_13-128x128.png using Guid(e7f11afee5cd8084b8263644ab770f23) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ae90e44b860a80c1023590d1adea7882') in 0.0071762 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Dirt/Dirt_11-128x128.png
+  artifactKey: Guid(b16be6fb44003364d87412c541c0610d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Dirt/Dirt_11-128x128.png using Guid(b16be6fb44003364d87412c541c0610d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5731a943d3db1fe9e118d8d794faa09f') in 0.0097115 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_01-128x128.png
+  artifactKey: Guid(5bcbd64e7fd216245ae76d669ea74208) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_01-128x128.png using Guid(5bcbd64e7fd216245ae76d669ea74208) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'df6494ab966592124bac0544deb7725b') in 0.0081466 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Dirt/Dirt_03-128x128.png
+  artifactKey: Guid(8f65f148202ab7c43bfc3901d719eb08) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Dirt/Dirt_03-128x128.png using Guid(8f65f148202ab7c43bfc3901d719eb08) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '95aeca0e3cc251d874c9bab345f5b68a') in 0.0088471 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_06-128x128.png
+  artifactKey: Guid(7ad83a3f442665d42951144ec0025977) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_06-128x128.png using Guid(7ad83a3f442665d42951144ec0025977) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a1cd6792acd981205c63cfd41233eb34') in 0.0095122 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_05-128x128.png
+  artifactKey: Guid(d601ebbc18ed8b54c863f33af5b1585b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_05-128x128.png using Guid(d601ebbc18ed8b54c863f33af5b1585b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9c0bd3475124cdde5133f6ea1df9cccb') in 0.0089263 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_03-128x128.png
+  artifactKey: Guid(01f46f75280cec7458625c3b06a07004) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_03-128x128.png using Guid(01f46f75280cec7458625c3b06a07004) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '47634d55dc17612a39cde87185c60b83') in 0.0102619 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_06-128x128.png
+  artifactKey: Guid(b3efde38046cf8b468ae77de80a4b0d5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_06-128x128.png using Guid(b3efde38046cf8b468ae77de80a4b0d5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '868333274e73f27ca0144b64755af6ad') in 0.0087321 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_14-128x128.png
+  artifactKey: Guid(25f827865abd8814f9620f41faa22e03) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_14-128x128.png using Guid(25f827865abd8814f9620f41faa22e03) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cf96585fc144bd238b030db2af27d5fb') in 0.0108225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_05-128x128.png
+  artifactKey: Guid(5e79ae459929020478bdb504087c466a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_05-128x128.png using Guid(5e79ae459929020478bdb504087c466a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2bbd9fff8870b909000720a8b6856619') in 0.0081499 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Dirt/Dirt_14-128x128.png
+  artifactKey: Guid(27f94fb9e41c3494dba8a9df9867b5d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Dirt/Dirt_14-128x128.png using Guid(27f94fb9e41c3494dba8a9df9867b5d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '610c72380aa99cd7ead3786240aca5e4') in 0.0085904 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_13-128x128.png
+  artifactKey: Guid(3512a87e21fcbc94ca7f53446eda9d76) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_13-128x128.png using Guid(3512a87e21fcbc94ca7f53446eda9d76) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e94d7ccc99f29a5fbe974492ab10fd12') in 0.0103198 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood/Wood_10-128x128.png
+  artifactKey: Guid(d7168c3bd5331cb489d01ab9beca5786) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood/Wood_10-128x128.png using Guid(d7168c3bd5331cb489d01ab9beca5786) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c8810272b2cccb62364fef978833358e') in 0.0082848 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_17-128x128.png
+  artifactKey: Guid(22e0c98d66be6144f8432ae2e459bccf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_17-128x128.png using Guid(22e0c98d66be6144f8432ae2e459bccf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0ccc7857e54d24715e7d85b35a448514') in 0.0083932 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_05-128x128.png
+  artifactKey: Guid(55f181fea966a9643b70af66a958bdea) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_05-128x128.png using Guid(55f181fea966a9643b70af66a958bdea) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fab4c0bdb040bc5d49468d5c47398b72') in 0.0084563 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_13-128x128.png
+  artifactKey: Guid(38bdbb2e6846b37448179af852b53bce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_13-128x128.png using Guid(38bdbb2e6846b37448179af852b53bce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '58f24ab57bd41dfd8b9465a687957854') in 0.0104106 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_11-128x128.png
+  artifactKey: Guid(79a0c06ed2760f243b025727b615c07d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_11-128x128.png using Guid(79a0c06ed2760f243b025727b615c07d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cada5d62686c1dd74d174539ee3ff765') in 0.010477 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_17-128x128.png
+  artifactKey: Guid(53297d92392cc8d47bf5dbb8bc931479) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_17-128x128.png using Guid(53297d92392cc8d47bf5dbb8bc931479) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '60971942a667becea2961f4317c411cf') in 0.0087125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_20-128x128.png
+  artifactKey: Guid(47c049cf45c172448ba9af2ee769e338) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_20-128x128.png using Guid(47c049cf45c172448ba9af2ee769e338) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8ce4db4e5b81d80444f22471ea755f05') in 0.0097126 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_02-128x128.png
+  artifactKey: Guid(145c04d83b947c4438040d69b0745339) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_02-128x128.png using Guid(145c04d83b947c4438040d69b0745339) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4ebc25d995a7b6984014b88a0e616965') in 0.0078814 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_11-128x128.png
+  artifactKey: Guid(fe66a6954688220478bdcc6b209e7fbb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_11-128x128.png using Guid(fe66a6954688220478bdcc6b209e7fbb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bafb493b48099ab54992ddb2a91aa031') in 0.0081229 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Dirt/Dirt_17-128x128.png
+  artifactKey: Guid(3a5a04114d3d3c34090ada7f5a676115) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Dirt/Dirt_17-128x128.png using Guid(3a5a04114d3d3c34090ada7f5a676115) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '028a37045354439ca2075b83d7b2f337') in 0.0109071 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_18-128x128.png
+  artifactKey: Guid(aae4199ffaab25143af2d6b596343800) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_18-128x128.png using Guid(aae4199ffaab25143af2d6b596343800) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '133a2798ce03c77303f776a87da8d57b') in 0.0083323 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_16-128x128.png
+  artifactKey: Guid(5f45f886a49868544b6887367a326eaf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_16-128x128.png using Guid(5f45f886a49868544b6887367a326eaf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c60e6a5842fa9d4d1bf8276727d08bc8') in 0.0083254 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_01-128x128.png
+  artifactKey: Guid(803bf7c512654854f85b33e44e15823f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_01-128x128.png using Guid(803bf7c512654854f85b33e44e15823f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '36fa283aefb8aaa5938bce699b2aa892') in 0.0075297 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_06-128x128.png
+  artifactKey: Guid(84ccb366f5a78624cb0c0368127e02fa) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_06-128x128.png using Guid(84ccb366f5a78624cb0c0368127e02fa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bf600b1f7370f3efa070b231ca77ff08') in 0.0093387 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_20-128x128.png
+  artifactKey: Guid(5e08fcb423a44a248a0a7b0345020e29) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_20-128x128.png using Guid(5e08fcb423a44a248a0a7b0345020e29) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '366854091b2fb582b385e76b04c6e2ea') in 0.0114453 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_01-128x128.png
+  artifactKey: Guid(3dda15d6e7ae8c746962d3fe9d3cd830) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_01-128x128.png using Guid(3dda15d6e7ae8c746962d3fe9d3cd830) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '869d7cd924523b7ab0803ba726c4577d') in 0.0099416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood/Wood_07-128x128.png
+  artifactKey: Guid(e5842bde576e57f4dabf66f0ad5fcb91) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood/Wood_07-128x128.png using Guid(e5842bde576e57f4dabf66f0ad5fcb91) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '305f9409a8459aeb2aeb854e5b0aa304') in 0.0083715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_15-128x128.png
+  artifactKey: Guid(474814e188ae5ee47946fceb9bbad759) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_15-128x128.png using Guid(474814e188ae5ee47946fceb9bbad759) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '64905c2d7fdf378ea3f5011cd988508d') in 0.0083773 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_08-128x128.png
+  artifactKey: Guid(c8013cb769424f9449cbef4e50d47fe4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_08-128x128.png using Guid(c8013cb769424f9449cbef4e50d47fe4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '211126af89d38f0ab4bbb2f2541f01c2') in 0.0088689 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_16-128x128.png
+  artifactKey: Guid(9dab4ebc7f3547145a898f8c92440ac1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_16-128x128.png using Guid(9dab4ebc7f3547145a898f8c92440ac1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e739e7da8b20f4c12405afa85b1ec9fc') in 0.0125708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Plaster/Plaster_09-128x128.png
+  artifactKey: Guid(69ae32adf2c8aec489369bd57f13c9e5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Plaster/Plaster_09-128x128.png using Guid(69ae32adf2c8aec489369bd57f13c9e5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b8030e65ed7da176e577f6c4cac25f07') in 0.0209064 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_07-128x128.png
+  artifactKey: Guid(4cec3898da3090448a425fce3cc285a0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_07-128x128.png using Guid(4cec3898da3090448a425fce3cc285a0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ca29c350a21bb444db05907d63daa7a5') in 0.014029 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Plaster/Plaster_07-128x128.png
+  artifactKey: Guid(d16ec760ba6b6ac4eac516a0e667773b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Plaster/Plaster_07-128x128.png using Guid(d16ec760ba6b6ac4eac516a0e667773b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2201c9efe99332db93ccb519c4ac8a86') in 0.0103027 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_01-128x128.png
+  artifactKey: Guid(ed16687665d5e7e468ebac05c56187dd) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_01-128x128.png using Guid(ed16687665d5e7e468ebac05c56187dd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1a6d7c455f3bdf1849b41752c8479b04') in 0.0083828 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood/Wood_01-128x128.png
+  artifactKey: Guid(b797ff84f1764c942b7eb36823a4796c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood/Wood_01-128x128.png using Guid(b797ff84f1764c942b7eb36823a4796c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '241eb2202cb8d705cd3051d14f87b57d') in 0.0102206 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_09-128x128.png
+  artifactKey: Guid(861025932b270c34eafe351702e78476) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_09-128x128.png using Guid(861025932b270c34eafe351702e78476) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '826f1270c52ea1d521f5dc0a66a38ade') in 0.0115661 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_02-128x128.png
+  artifactKey: Guid(cdf43c62aa0bd594a82756f61277d9c8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_02-128x128.png using Guid(cdf43c62aa0bd594a82756f61277d9c8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '07cc4d6518bcfcd8fb87ac417fecd53d') in 0.0112454 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood/Wood_13-128x128.png
+  artifactKey: Guid(f759d058b2c3676438f6fa5d7756ba91) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood/Wood_13-128x128.png using Guid(f759d058b2c3676438f6fa5d7756ba91) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bd31a216bc23f708895a031d89342123') in 0.0092874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_09-128x128.png
+  artifactKey: Guid(787a58c5de154534cbd443c21217a5b8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_09-128x128.png using Guid(787a58c5de154534cbd443c21217a5b8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8c53354b3cff1f3c7ea67008b545199d') in 0.0110056 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_07-128x128.png
+  artifactKey: Guid(aace09936cc26874a93530fcf9210a12) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_07-128x128.png using Guid(aace09936cc26874a93530fcf9210a12) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '15905e8bf062bcc89f43b43247ba8820') in 0.0087837 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Dirt/Dirt_05-128x128.png
+  artifactKey: Guid(34523871e00f0f74fa4e936fe0cb58f0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Dirt/Dirt_05-128x128.png using Guid(34523871e00f0f74fa4e936fe0cb58f0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7fe472d2a1ab3e08d3279eb533969268') in 0.0089106 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_09-128x128.png
+  artifactKey: Guid(fe4f248aea276654ea5f80741ad95586) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_09-128x128.png using Guid(fe4f248aea276654ea5f80741ad95586) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '539c7d088b698f6634ba1d8718471065') in 0.0106813 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_03-128x128.png
+  artifactKey: Guid(fc02aa98174ab6349ac40b674f23bf75) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_03-128x128.png using Guid(fc02aa98174ab6349ac40b674f23bf75) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e50785f04af27d7760cf4ad842ffcc54') in 0.0093834 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_03-128x128.png
+  artifactKey: Guid(923dbc11457d22c439c24a879d86404e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_03-128x128.png using Guid(923dbc11457d22c439c24a879d86404e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fca505702274f4d0078138bce00c638e') in 0.0093331 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_18-128x128.png
+  artifactKey: Guid(44d3727987b8bd74e8936a17700c858c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_18-128x128.png using Guid(44d3727987b8bd74e8936a17700c858c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2894d00f78624c486a828405a42a5c8f') in 0.0086828 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_15-128x128.png
+  artifactKey: Guid(4c4d7c3531446724eb3038a9a037f4eb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_15-128x128.png using Guid(4c4d7c3531446724eb3038a9a037f4eb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e56317c2e85e09c9fb1cea8d3f3952f3') in 0.0116077 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_19-128x128.png
+  artifactKey: Guid(82bad4bdc43b2a14d8975737c5eb6db1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_19-128x128.png using Guid(82bad4bdc43b2a14d8975737c5eb6db1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '733e2643d94f32945d27903cca704908') in 0.0110312 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_18-128x128.png
+  artifactKey: Guid(2d0e867eec7da744885416cf980edb53) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_18-128x128.png using Guid(2d0e867eec7da744885416cf980edb53) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a996778f92584eb190a0e5595df19256') in 0.0088197 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile
+  artifactKey: Guid(3680a6fabbed68d48b74c4e343187dd1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile using Guid(3680a6fabbed68d48b74c4e343187dd1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '476890c985c57c633bb80c476270ba08') in 0.0039252 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_07-128x128.png
+  artifactKey: Guid(11084f311ed681f4cb541fa1e14f31ef) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_07-128x128.png using Guid(11084f311ed681f4cb541fa1e14f31ef) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0baaf370061e73f8b1ff9e1fa602aa44') in 0.008324 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood/Wood_09-128x128.png
+  artifactKey: Guid(b0e69b7fb8867bb43b88b0308bcf6478) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood/Wood_09-128x128.png using Guid(b0e69b7fb8867bb43b88b0308bcf6478) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3df97bc0f520b55b711e1beeabfde941') in 0.0085461 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Plaster/Plaster_13-128x128.png
+  artifactKey: Guid(6fe94c015405f2f4d88a1ca3f91c8e50) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Plaster/Plaster_13-128x128.png using Guid(6fe94c015405f2f4d88a1ca3f91c8e50) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ee07f678da33016a483510e55c8f2101') in 0.0108138 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_14-128x128.png
+  artifactKey: Guid(0108161e5754ccc44b2621fad1d9e556) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_14-128x128.png using Guid(0108161e5754ccc44b2621fad1d9e556) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd74634b8bfbc8293ff3c16b28aedd3ff') in 0.0136255 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood/Wood_08-128x128.png
+  artifactKey: Guid(a98ecb17499d2654ebeb3b15ca9189b0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood/Wood_08-128x128.png using Guid(a98ecb17499d2654ebeb3b15ca9189b0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '10e21e339496812ada8d46306ca37f8e') in 0.0114483 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_06-128x128.png
+  artifactKey: Guid(b82f64c6f5f5db14fa51d8f526ccb865) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_06-128x128.png using Guid(b82f64c6f5f5db14fa51d8f526ccb865) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ba6cb073d30afadeba224acad409fdfc') in 0.0121235 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_10-128x128.png
+  artifactKey: Guid(b814f363d489119479ec8e2fc261e072) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_10-128x128.png using Guid(b814f363d489119479ec8e2fc261e072) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8d9d7f128fa9df2e9834dd98f40631cf') in 0.0092 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_02-128x128.png
+  artifactKey: Guid(5d62d48f4fe77674b848dea79a099333) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_02-128x128.png using Guid(5d62d48f4fe77674b848dea79a099333) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a640482eb521614c03fad5edd30696b2') in 0.0100772 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_08-128x128.png
+  artifactKey: Guid(b802e55db5a356b46953e64230e3a5d4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_08-128x128.png using Guid(b802e55db5a356b46953e64230e3a5d4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8ccc031a9f143c83ee0e58e8e98394e9') in 0.012652 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Dirt/Dirt_13-128x128.png
+  artifactKey: Guid(54f25bf3780569643b60419002e28d77) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Dirt/Dirt_13-128x128.png using Guid(54f25bf3780569643b60419002e28d77) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c5acaae4e7744b1fd0dbb41a8fd95cb3') in 0.0100419 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_06-128x128.png
+  artifactKey: Guid(e07e8e2a260fdf34396788241f3f7fb9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_06-128x128.png using Guid(e07e8e2a260fdf34396788241f3f7fb9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ab098dde6c6313d6f33ed0723e0de18e') in 0.0107879 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_14-128x128.png
+  artifactKey: Guid(ff88588ae531d364ba8057f06ee7c280) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_14-128x128.png using Guid(ff88588ae531d364ba8057f06ee7c280) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9c12949a1191f81e0a5d2b44d8fdd8c2') in 0.0093645 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_12-128x128.png
+  artifactKey: Guid(01babc1fa45ea874791fe9311c28e54d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_12-128x128.png using Guid(01babc1fa45ea874791fe9311c28e54d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3a2a56e340c924937c394bdde1082aa9') in 0.009465 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_11-128x128.png
+  artifactKey: Guid(6284bbf0ca0822746bab65a2eb26d6ed) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_11-128x128.png using Guid(6284bbf0ca0822746bab65a2eb26d6ed) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '238ea878164c126b58ce7b78cb4b87a5') in 0.011099 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_12-128x128.png
+  artifactKey: Guid(c998cad7403afa94791b4a47ecc37ece) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_12-128x128.png using Guid(c998cad7403afa94791b4a47ecc37ece) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7da92ffd3665ed43810584970f9de066') in 0.0081535 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_02-128x128.png
+  artifactKey: Guid(24faedde3b6298d4fb079aac7021dd1b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_02-128x128.png using Guid(24faedde3b6298d4fb079aac7021dd1b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b1026552c16825f3a5f3d4e718c44f9e') in 0.0081158 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_03-128x128.png
+  artifactKey: Guid(ed228f1a81cac5940b957e0b200e2e16) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_03-128x128.png using Guid(ed228f1a81cac5940b957e0b200e2e16) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1daf302b37197a6d966b8b7cc2bfe789') in 0.0096564 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_10-128x128.png
+  artifactKey: Guid(bb6f6777475b3b34f91b1d199c366150) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_10-128x128.png using Guid(bb6f6777475b3b34f91b1d199c366150) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd41998cd1f224842660090e65ee541f4') in 0.0079153 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_06-128x128.png
+  artifactKey: Guid(ef579d43468e66f4f84fb303885f779c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_06-128x128.png using Guid(ef579d43468e66f4f84fb303885f779c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fdbe5fe7458d4775f1014153a07e4190') in 0.010256 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_03-128x128.png
+  artifactKey: Guid(b7fc2169f9ae05e4985ea13e3bbfb2c6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_03-128x128.png using Guid(b7fc2169f9ae05e4985ea13e3bbfb2c6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '642b635063d70584448881a09127146f') in 0.0117789 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_01-128x128.png
+  artifactKey: Guid(bedef2b22d7fd71418b1a421a095e5f7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_01-128x128.png using Guid(bedef2b22d7fd71418b1a421a095e5f7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '638fc0a23a830a22fd14be48f509defa') in 0.0111227 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_15-128x128.png
+  artifactKey: Guid(0dfb3b1e145bc224e98ed53cdd594b23) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_15-128x128.png using Guid(0dfb3b1e145bc224e98ed53cdd594b23) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '33549a49eab494c32500c5c31501ff95') in 0.0099927 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_16-128x128.png
+  artifactKey: Guid(9fcf2e0cb32674a45b5d9d60b615cd1a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_16-128x128.png using Guid(9fcf2e0cb32674a45b5d9d60b615cd1a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9d9b8cbead0396ce48b8a57fb96b77d9') in 0.0104149 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_10-128x128.png
+  artifactKey: Guid(711767d2b149d7041ba4651d1fbc9263) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_10-128x128.png using Guid(711767d2b149d7041ba4651d1fbc9263) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '421498da7d6e7584b94878f13851f895') in 0.0089169 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_20-128x128.png
+  artifactKey: Guid(83105d1b72f707f49a7cc5a65c4b9fbb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_20-128x128.png using Guid(83105d1b72f707f49a7cc5a65c4b9fbb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '30a19fb6ff9dcbaca79abf4ba360cc83') in 0.0119948 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood
+  artifactKey: Guid(b11d520caa388574c890d247da3f4fd8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood using Guid(b11d520caa388574c890d247da3f4fd8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f4355f51dc22b3011c5b1e800d58d02a') in 0.0037328 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_07-128x128.png
+  artifactKey: Guid(06c83e0789f622e4e80d3966a595824f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_07-128x128.png using Guid(06c83e0789f622e4e80d3966a595824f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd5ee15cd71051042eeb1f46b1d3be6e9') in 0.0091885 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_14-128x128.png
+  artifactKey: Guid(30cbbd5a46f85c14f97047de0964ab3a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_14-128x128.png using Guid(30cbbd5a46f85c14f97047de0964ab3a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '19d71e9053c9cd7ef16f7d72907b1ba9') in 0.0084833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_16-128x128.png
+  artifactKey: Guid(1bd2ad5ab2f917d4996638711f4685d3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_16-128x128.png using Guid(1bd2ad5ab2f917d4996638711f4685d3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '49ab4886ed1e501248a100898e9be477') in 0.0079948 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_06-128x128.png
+  artifactKey: Guid(7bfe7433e56de7e4194690612c3e5810) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_06-128x128.png using Guid(7bfe7433e56de7e4194690612c3e5810) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '31ed14f303df6e047cd4d30e8be27357') in 0.0090697 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Wood/Wood_17-128x128.png
+  artifactKey: Guid(d69d316a256e8da468bacd2435784737) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Wood/Wood_17-128x128.png using Guid(d69d316a256e8da468bacd2435784737) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '811fdca7013e9a45bc3cf61e50924cc1') in 0.011916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stains
+  artifactKey: Guid(ef2a8518b0b61ec4dbfba7706c9e6272) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stains using Guid(ef2a8518b0b61ec4dbfba7706c9e6272) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '789f704d3deb12a1c9bbe770832b4f09') in 0.0051347 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_13-128x128.png
+  artifactKey: Guid(c84090dec0c989c4d9fff522ddde9c9e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_13-128x128.png using Guid(c84090dec0c989c4d9fff522ddde9c9e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '630f3a0a7f29390a07e0cdc056c702af') in 0.0094546 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_18-128x128.png
+  artifactKey: Guid(0c439d2b77f7a1445bf4b32dbe7cbc07) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Dirt/Dirt_18-128x128.png using Guid(0c439d2b77f7a1445bf4b32dbe7cbc07) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b9fd6bd09761565ed2cae6c3cbb8737e') in 0.0091524 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_03-128x128.png
+  artifactKey: Guid(a5567d96506f71f4292a2d900235fdb8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_03-128x128.png using Guid(a5567d96506f71f4292a2d900235fdb8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '44de22241e36864b1b906a77ba3beabc') in 0.0094177 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_19-128x128.png
+  artifactKey: Guid(dbee7bbf40fa8f64e9175846e0d24f54) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_19-128x128.png using Guid(dbee7bbf40fa8f64e9175846e0d24f54) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5d61b54933e3a099813d80e9e77c3e7f') in 0.0102342 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_15-128x128.png
+  artifactKey: Guid(80f9436baa1fb1941a21b817eaa5ad97) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_15-128x128.png using Guid(80f9436baa1fb1941a21b817eaa5ad97) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4d3b8bfc175c5789bfbdfa29d3ef7759') in 0.00955 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Brick/Brick_18-128x128.png
+  artifactKey: Guid(f6a9e10a006d7ba4f85f94f10fd45497) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Brick/Brick_18-128x128.png using Guid(f6a9e10a006d7ba4f85f94f10fd45497) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '484ed53a81ef5771aa96b7edb842bea6') in 0.0086249 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_20-128x128.png
+  artifactKey: Guid(b37a87ca9d29a16449ccb42fea2b5dc0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_20-128x128.png using Guid(b37a87ca9d29a16449ccb42fea2b5dc0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0b97dabc43a994400114b9f9536c89a1') in 0.0086175 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_02-128x128.png
+  artifactKey: Guid(2a937d3868514cb4a9c6710d02608e3e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_02-128x128.png using Guid(2a937d3868514cb4a9c6710d02608e3e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '142241ecf29fd70c4630d04d60a37591') in 0.0084441 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_09-128x128.png
+  artifactKey: Guid(d647fd3d48def9547976ef3b3bb5a14d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_09-128x128.png using Guid(d647fd3d48def9547976ef3b3bb5a14d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '866bd442735a0929721a88edb6450eda') in 0.0089707 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Plaster/Plaster_03-128x128.png
+  artifactKey: Guid(5b8d629186e268a40bf7f24451b3af3e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Plaster/Plaster_03-128x128.png using Guid(5b8d629186e268a40bf7f24451b3af3e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd3352c3f9f42e76c31a05bad5117dabc') in 0.0105524 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_09-128x128.png
+  artifactKey: Guid(6b5d3fb9f7b97e143829c1d958295c8b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_09-128x128.png using Guid(6b5d3fb9f7b97e143829c1d958295c8b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bc2a46be24d3adf2d6bc5bf65577c6ea') in 0.0080998 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_19-128x128.png
+  artifactKey: Guid(a73a6ae6341fac34399addd7242ea328) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements/Elements_19-128x128.png using Guid(a73a6ae6341fac34399addd7242ea328) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b8a3c90dfbb21bd193ec05242c445a35') in 0.0101227 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_10-128x128.png
+  artifactKey: Guid(065c46c6396ffae4bba231bb6dccab42) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_10-128x128.png using Guid(065c46c6396ffae4bba231bb6dccab42) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '465d4d25397ffb4dca16f781b1fd9d28') in 0.0090171 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_12-128x128.png
+  artifactKey: Guid(6290c9ed67595ea429ea533acbcb43ac) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_12-128x128.png using Guid(6290c9ed67595ea429ea533acbcb43ac) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c87ef3f5021736118e4f40edb1160e4a') in 0.0079966 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Elements
+  artifactKey: Guid(d825c82a28385b94db41095d408cd374) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Elements using Guid(d825c82a28385b94db41095d408cd374) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3cab29fa7690e0851f24b6245ace1ee5') in 0.0037229 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_07-128x128.png
+  artifactKey: Guid(d583946320086b844be351e1fa4687e2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Plaster/Plaster_07-128x128.png using Guid(d583946320086b844be351e1fa4687e2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ccbdd361c3793f3fc68d2ea1f0c79034') in 0.0097466 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_04-128x128.png
+  artifactKey: Guid(eca50e867d4a7e94fb5a1a056fb00d6a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_04-128x128.png using Guid(eca50e867d4a7e94fb5a1a056fb00d6a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c9de34957e4f24d65ad94ce76bb3e33d') in 0.0093337 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_04-128x128.png
+  artifactKey: Guid(257102082250c5343a2230da6861c19b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_04-128x128.png using Guid(257102082250c5343a2230da6861c19b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '84ebf856c7d70801603b11d7031e9967') in 0.008338 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Plaster/Plaster_05-128x128.png
+  artifactKey: Guid(6efd1e136678a084a9bedab5f543cda7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Plaster/Plaster_05-128x128.png using Guid(6efd1e136678a084a9bedab5f543cda7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '67cbf7fb4d3d8c5bb4840fa9aa9d68f7') in 0.0078672 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_01-128x128.png
+  artifactKey: Guid(2977fa80c460d22469240be6b1df483e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_01-128x128.png using Guid(2977fa80c460d22469240be6b1df483e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bc141143accb6d55ad29f994f206f306') in 0.0087588 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_01-128x128.png
+  artifactKey: Guid(fd0275a1b2198b54389fcf1b174cca96) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_01-128x128.png using Guid(fd0275a1b2198b54389fcf1b174cca96) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5381639ff28630fabadef0e4f8bd7d58') in 0.0079923 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile/Tile_19-128x128.png
+  artifactKey: Guid(b699fba7e85a5f54c9658b8f93e9a3a3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile/Tile_19-128x128.png using Guid(b699fba7e85a5f54c9658b8f93e9a3a3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1aa062e91a0fdc370191e45139a2e5ad') in 0.0111473 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Floor/Horror_Floor_07-128x128.png
+  artifactKey: Guid(5ca6bfa32f85e864ca01972add039761) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Floor/Horror_Floor_07-128x128.png using Guid(5ca6bfa32f85e864ca01972add039761) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '35e4597622fb928428c758cdeb1b5b9b') in 0.0092861 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Plaster/Plaster_06-128x128.png
+  artifactKey: Guid(33859707f72602f4088081b40726b65e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Plaster/Plaster_06-128x128.png using Guid(33859707f72602f4088081b40726b65e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3887fb5762254b41a46793572cfe50f9') in 0.0092107 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_10-128x128.png
+  artifactKey: Guid(96c84323d64839343b530dc09acfb97f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_10-128x128.png using Guid(96c84323d64839343b530dc09acfb97f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dd4709d0bdc72584e7c3bf236001c6a4') in 0.0086651 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wall/Horror_Wall_03-128x128.png
+  artifactKey: Guid(2129111129addf448a9ddea8d6f3d613) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wall/Horror_Wall_03-128x128.png using Guid(2129111129addf448a9ddea8d6f3d613) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '39d24fa92b6d3ae94d16420f09f03bf7') in 0.0078381 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stains/Horror_Stain_13-128x128.png
+  artifactKey: Guid(993fadc0c4b2efd4484e07ad6c660f20) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stains/Horror_Stain_13-128x128.png using Guid(993fadc0c4b2efd4484e07ad6c660f20) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0cef99475b8f1b3ea74bb2cfcfa6bfd4') in 0.0097626 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_11-128x128.png
+  artifactKey: Guid(75a3c87072a019248a7c0c16ddc1d118) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_11-128x128.png using Guid(75a3c87072a019248a7c0c16ddc1d118) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1b09c7d7e7cb400afab7ec15b0e3977b') in 0.0083162 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_08-128x128.png
+  artifactKey: Guid(811f692072d3ee846892bc9071589f25) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_08-128x128.png using Guid(811f692072d3ee846892bc9071589f25) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a10f0c02ff4d2d0a4182281d18b0626d') in 0.008593 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_16-128x128.png
+  artifactKey: Guid(969b6ca0e20f96e45b1c5629129c52bb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_16-128x128.png using Guid(969b6ca0e20f96e45b1c5629129c52bb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9fd1fd5763c629f5d659ec059c660ca5') in 0.0085854 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_13-128x128.png
+  artifactKey: Guid(5efd3ae1d4205f347bae744f9bf64b47) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Tile/Tile_13-128x128.png using Guid(5efd3ae1d4205f347bae744f9bf64b47) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1396f6f67867d897010b5a505d902623') in 0.0082224 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_15-128x128.png
+  artifactKey: Guid(250494189cfd5304a8cb5629d9e3fe25) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_15-128x128.png using Guid(250494189cfd5304a8cb5629d9e3fe25) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1e601745c4c6be952679486be7cae8ba') in 0.0077439 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Horror_Brick_03-128x128.png
+  artifactKey: Guid(2c8fcc98fb5bcf34da287033b6199631) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Horror_Brick_03-128x128.png using Guid(2c8fcc98fb5bcf34da287033b6199631) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f9b488e10d7abaf4f7948b577d69ce34') in 0.0095872 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wall/Horror_Wall_13-128x128.png
+  artifactKey: Guid(20573195e58a6ec46a9d5397f1311fe9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wall/Horror_Wall_13-128x128.png using Guid(20573195e58a6ec46a9d5397f1311fe9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '061f62c92a36f66fee8ec870263ffeec') in 0.0084683 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stains/Horror_Stain_09-128x128.png
+  artifactKey: Guid(e87ac0069e4d649488e7a41ea0f640ba) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stains/Horror_Stain_09-128x128.png using Guid(e87ac0069e4d649488e7a41ea0f640ba) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '65eb5822397258d50f3c7c1a90dd579d') in 0.0082143 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_14-128x128.png
+  artifactKey: Guid(3b395c6a9a2002248882ef7d7fd4f96d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_14-128x128.png using Guid(3b395c6a9a2002248882ef7d7fd4f96d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6b81f0db05f10b04468780595089f8a5') in 0.0082159 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_04-128x128.png
+  artifactKey: Guid(a515be794506aaf4aab9ea506e2b94fb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_04-128x128.png using Guid(a515be794506aaf4aab9ea506e2b94fb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0945e0934c21b031033d4d6b8d728515') in 0.0087574 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_10-128x128.png
+  artifactKey: Guid(9278791ab22b1af418b11477e6321ed1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_10-128x128.png using Guid(9278791ab22b1af418b11477e6321ed1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd21589470402bdd5e5534735c9a5fdcd') in 0.0709996 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_06-128x128.png
+  artifactKey: Guid(ada372aa574072b4891f86c4c1b1c236) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_06-128x128.png using Guid(ada372aa574072b4891f86c4c1b1c236) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '025a67d778b0ec920a77932cac3756f9') in 0.0083236 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Horror_Stone_13-128x128.png
+  artifactKey: Guid(3d86e11862a99a34b9e1e6272bfbc2e0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Horror_Stone_13-128x128.png using Guid(3d86e11862a99a34b9e1e6272bfbc2e0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1c988c5ec01ebe59704153ae0ebb7730') in 0.0077393 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Horror_Brick_05-128x128.png
+  artifactKey: Guid(109fe7bfee856924f947fcfd1afa12e1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Horror_Brick_05-128x128.png using Guid(109fe7bfee856924f947fcfd1afa12e1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '099e0c1a176c610b5ba954bd6519996c') in 0.0078847 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stains/Horror_Stain_07-128x128.png
+  artifactKey: Guid(725741eaffb0afb4e949e806626ab3f1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stains/Horror_Stain_07-128x128.png using Guid(725741eaffb0afb4e949e806626ab3f1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0d9e77fb9a194931129d25d938038ced') in 0.0096604 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_03-128x128.png
+  artifactKey: Guid(9726177fc83e97646b623e20d0e82719) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_03-128x128.png using Guid(9726177fc83e97646b623e20d0e82719) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4ac705a814db6098b610c0041bf66b8a') in 0.0077093 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Horror_Stone_07-128x128.png
+  artifactKey: Guid(576fc4ec1bc46114fbc63024ab48d8e6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Horror_Stone_07-128x128.png using Guid(576fc4ec1bc46114fbc63024ab48d8e6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4e82ecfadb49c6095eeb21f1dfd6309c') in 0.0140572 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wall/Horror_Wall_04-128x128.png
+  artifactKey: Guid(4c0cb21c651a9e644b7c77015a5634cb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wall/Horror_Wall_04-128x128.png using Guid(4c0cb21c651a9e644b7c77015a5634cb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9a4e3e0a941d2900752e233e377dc50d') in 0.0194557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_05-128x128.png
+  artifactKey: Guid(09cbc42ef1993644dbd637f6df1601b2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Horror_Metal_05-128x128.png using Guid(09cbc42ef1993644dbd637f6df1601b2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3d6e2310df5b170ab987ed0dff3604ff') in 0.010902 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_07-128x128.png
+  artifactKey: Guid(17369cd5a355d5043bc75ab1b64b0068) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_07-128x128.png using Guid(17369cd5a355d5043bc75ab1b64b0068) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4901b008b8b3c44877338fe7843ddb29') in 0.0087052 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_20-128x128.png
+  artifactKey: Guid(f96c0257582cfa4448e4364dc7cb2738) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Metal/Metal_20-128x128.png using Guid(f96c0257582cfa4448e4364dc7cb2738) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fed917fff81519304cd596e6fc021440') in 0.0082231 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Tile
+  artifactKey: Guid(de835c9db396893408cc859d4aa52194) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Tile using Guid(de835c9db396893408cc859d4aa52194) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ad3c2f77830cfffde1dd99da038a37f1') in 0.0041639 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Plaster/Plaster_01-128x128.png
+  artifactKey: Guid(f64e4136eef5d1249bfb4c17f2a93386) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Plaster/Plaster_01-128x128.png using Guid(f64e4136eef5d1249bfb4c17f2a93386) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2ad4497e3411900b084bb31db1eb2cb5') in 0.0088627 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Floor/Horror_Floor_05-128x128.png
+  artifactKey: Guid(72ab25c03f1feb949aa88279f92bbfdb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Floor/Horror_Floor_05-128x128.png using Guid(72ab25c03f1feb949aa88279f92bbfdb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b61dd9e8e13f5401fc92526897c18f97') in 0.0084199 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Dirt/Dirt_10-128x128.png
+  artifactKey: Guid(869ce0a239dcc9e43b93bd91cc44727a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Dirt/Dirt_10-128x128.png using Guid(869ce0a239dcc9e43b93bd91cc44727a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e7e0fa223301c36efacd00f781ee0483') in 0.0123178 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_08-128x128.png
+  artifactKey: Guid(2c3bbdc6e6cfd404797addb7d6e583fe) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Brick/Brick_08-128x128.png using Guid(2c3bbdc6e6cfd404797addb7d6e583fe) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c08b789cba4af7553174492bd7722a35') in 0.0086029 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_02-128x128.png
+  artifactKey: Guid(9bb6e6cbb1845444faca2af8c998c619) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_02-128x128.png using Guid(9bb6e6cbb1845444faca2af8c998c619) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9f82211c38973ef15267a222e60db47f') in 0.0079613 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_16-128x128.png
+  artifactKey: Guid(ee28861b6a30e7441a90ef3a4cab67db) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_16-128x128.png using Guid(ee28861b6a30e7441a90ef3a4cab67db) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c3692522a97f032065274a181f70a72a') in 0.0095179 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_11-128x128.png
+  artifactKey: Guid(f5a95d3791dd13a4db0fd38ae7299f13) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_11-128x128.png using Guid(f5a95d3791dd13a4db0fd38ae7299f13) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '37ad07003b1ba61d3db50ad0f511da09') in 0.0093085 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_17-128x128.png
+  artifactKey: Guid(3109941920963944285a5ce2c7030fb9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Stone_17-128x128.png using Guid(3109941920963944285a5ce2c7030fb9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e261bd5068240f1815c999d974d15568') in 0.0101612 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_19-128x128.png
+  artifactKey: Guid(dc0643cff6aabd646bdfd5f0ff976db3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_19-128x128.png using Guid(dc0643cff6aabd646bdfd5f0ff976db3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '71538809917338d6245230c2eea39982') in 0.00999 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Metal/Metal_14-128x128.png
+  artifactKey: Guid(ba9f9bf6ed810364eb55e0ec5190f801) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Metal/Metal_14-128x128.png using Guid(ba9f9bf6ed810364eb55e0ec5190f801) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c4f73ddb2da75b822bb789d2a74bb9f6') in 0.0086481 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Stone/Horror_Stone_01-128x128.png
+  artifactKey: Guid(d428c4e3958580d4e9124fd9454261a8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Stone/Horror_Stone_01-128x128.png using Guid(d428c4e3958580d4e9124fd9454261a8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7bdb75a259a8d4fa8c43065859bb6d21') in 0.007967 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_02-128x128.png
+  artifactKey: Guid(60934f2166fd48248aeda92983d89dec) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Wood/Wood_02-128x128.png using Guid(60934f2166fd48248aeda92983d89dec) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7cbd615af7da7e0f2c70b7325ec73559') in 0.0086897 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Stone/Stone_04-128x128.png
+  artifactKey: Guid(a17c5c4b9a65e8c40a5e229815c5c59d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Stone/Stone_04-128x128.png using Guid(a17c5c4b9a65e8c40a5e229815c5c59d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '76c986da9753fe430cdc758073f5b794') in 0.0105906 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_11-128x128.png
+  artifactKey: Guid(459773b5e5624064db8bccd685fc32dd) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_11-128x128.png using Guid(459773b5e5624064db8bccd685fc32dd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '747bf4eb56346eaf5d74b6728dca1c06') in 0.0082146 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_14-128x128.png
+  artifactKey: Guid(4eac76d01ba005b4f94c7fa69a2d2f9b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Materials/Texture Pack/128x128 Horror/Misc/Horror_Misc_14-128x128.png using Guid(4eac76d01ba005b4f94c7fa69a2d2f9b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b2b07010478f5c3a434f15f1595e8804') in 0.0076181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.846059 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_04-128x128.png
+  artifactKey: Guid(d7ccbc7ca0747394685f8970de9d60e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_04-128x128.png using Guid(d7ccbc7ca0747394685f8970de9d60e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4f83a5a3e519bbc8749276b4d06fc74f') in 0.0515872 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_20-128x128.png
+  artifactKey: Guid(c718a994feca9a04b8f54d6568badca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_20-128x128.png using Guid(c718a994feca9a04b8f54d6568badca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66ea9f454f602728995735ee9f77ca04') in 0.0078306 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_12-128x128.png
+  artifactKey: Guid(858d850c4ffc97e4db5e699c10fe5e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_12-128x128.png using Guid(858d850c4ffc97e4db5e699c10fe5e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f59b09f9a0480ea90e44a22feeaee038') in 0.0088833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_10-128x128.png
+  artifactKey: Guid(384f71fdab6a55e4b82375136527190f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_10-128x128.png using Guid(384f71fdab6a55e4b82375136527190f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '290f4aea52121f5bbbe4a2056f60ae65') in 0.00783 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Texture Pack/128x128/Elements/Elements_16-128x128.png
+  artifactKey: Guid(ee28861b6a30e7441a90ef3a4cab67db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Texture Pack/128x128/Elements/Elements_16-128x128.png using Guid(ee28861b6a30e7441a90ef3a4cab67db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1627df3e27bb60ab657936d3abf35361') in 0.0084911 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

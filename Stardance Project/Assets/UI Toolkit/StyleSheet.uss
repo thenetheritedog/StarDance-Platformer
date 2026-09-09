@@ -1,9 +1,9 @@
 .unity-button {
-    font-size: 57px;
-    background-color: rgb(255, 255, 255);
-    -unity-text-outline-color: rgb(0, 0, 0);
+    font-size: 70px;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-text-outline-color: rgb(253, 218, 35);
     -unity-text-outline-width: 0;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     -unity-font-style: bold;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -24,12 +24,13 @@
     flex-direction: row;
     width: 0%;
     flex-grow: 1;
-    border-left-color: rgb(0, 0, 0);
-    border-right-color: rgb(0, 0, 0);
-    border-top-color: rgb(0, 0, 0);
-    border-bottom-color: rgb(0, 0, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
     transition-duration: 0.2s;
     transition-timing-function: ease-out-back;
+    -unity-font-definition: url("project://database/Assets/Materials/FontdinerSwanky-Regular.ttf?fileID=12800000&guid=9bf9b04979798cb4890f839b304c216e&type=3#FontdinerSwanky-Regular");
 }
 
 .unity-slider {
@@ -52,4 +53,10 @@
     rotate: 2deg;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out-back;
+}
+
+.text {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/Materials/FontdinerSwanky-Regular.ttf?fileID=12800000&guid=9bf9b04979798cb4890f839b304c216e&type=3#FontdinerSwanky-Regular");
 }

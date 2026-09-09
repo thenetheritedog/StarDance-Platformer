@@ -14,6 +14,7 @@ public class GliderMove : MonoBehaviour
     [SerializeField] private float slowDown;
     [SerializeField] private float maxSpeed;
     [SerializeField] private bool gliderCollisionResetFalse;
+    [SerializeField] private LayerMask resetLayers;
     private Rigidbody rb;
 
     private void Start()
@@ -45,7 +46,6 @@ public class GliderMove : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (Time.timeScale == 0) { return; }
         
         rb.linearVelocity = direction;
         if (player.GetComponent<PlayerMovement>().glider != this)
@@ -66,9 +66,9 @@ public class GliderMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == 0 && !gliderCollisionResetFalse) 
+        if ( ((1 << collision.gameObject.layer) & resetLayers.value) != 0 && !gliderCollisionResetFalse) 
         {
-            FindAnyObjectByType<PlayerManager>().ResetLevel();
+            FindAnyObjectByType<PlayerManager>().StartCoroutine(player.ResetLevel());
         }
         
     }
@@ -78,7 +78,8 @@ public class GliderMove : MonoBehaviour
 
         speed = baseSpeed;
         direction = spawner.transform.forward * speed;
-        transform.position = spawner.transform.position;
-        transform.forward = spawner.transform.forward; 
+        transform.localPosition = Vector3.zero;
+        transform.forward = Vector3.zero; 
+        Debug.Log("Reset Glider");
     }
 }

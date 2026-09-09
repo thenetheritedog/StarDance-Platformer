@@ -35,13 +35,14 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         Menu();
+        Glider();
         if (Time.timeScale == 0) 
             return;
         Movement();
         CameraMovement();
         Jump();
         Grapple();
-        Glider();
+        
         playerManager.ChangeLevelDebug(nextLevelAction.WasPressedThisFrame(), nextFolderAction.WasPressedThisFrame(), testLevelAction.WasPressedThisFrame());
     }
 
@@ -70,9 +71,9 @@ public class InputManager : MonoBehaviour
     }
     private void Glider()
     {
-        if (glideAction.IsPressed())
+        if (glideAction.WasPressedThisFrame())
         {
-            playerManager.ResetLevel();
+            playerManager.StartCoroutine(playerManager.ResetLevel());
         }
     }
     private void Menu()

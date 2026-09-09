@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +8,7 @@ using UnityEngine.UIElements;
 public class PlayerManager : MonoBehaviour
 {
     private PlayerMovement playerMovement;
+    private Rigidbody rb;
     private InputManager input;
     public CameraManager camera;
     public Vector3 cameraPlayerPosition;
@@ -20,6 +22,10 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private int levelFolder;
     [SerializeField] private int currentLevelInFolder;
     [SerializeField] private GameObject levelOn;
+    [SerializeField] private ParticleSystem deathParticles;
+    [SerializeField] private GameObject playerModel;
+    [SerializeField] GliderMove glider;
+
 
     public float sensitivity;
     private void Start()
@@ -32,7 +38,9 @@ public class PlayerManager : MonoBehaviour
         spawn = transform.position;
         levelOn = Instantiate(Resources.Load<GameObject>($"Levels/{levelFolder}/{currentLevelInFolder}"));
         Application.targetFrameRate = 60;
-
+        Time.fixedDeltaTime = 1f / 60f;
+        glider = FindAnyObjectByType<GliderMove>();
+        rb = GetComponent<Rigidbody>();
 
 
 
@@ -49,12 +57,28 @@ public class PlayerManager : MonoBehaviour
         cameraPlayerPosition = transform.position;
         Vector3 baseAngles = camera.pivot.transform.localEulerAngles;
         baseAngles.z = 0f;
-        cameraPlayerRotation = Vector3.Lerp(cameraPlayerRotation, baseAngles, Time.deltaTime * 3);
+        cameraPlayerRotation = Vector3.Lerp(cameraPlayerRotation, baseAngles, Time.unscaledDeltaTime * 3);
         
 }
 
-    public void ResetLevel()
+    public IEnumerator ResetLevel()
     {
+        Time.timeScale = 0;
+        deathParticles.Play();
+        playerModel.SetActive(false);
+        playerMovement.lockOn.transform.localScale = Vector3.zero;
+        if (glider != null)
+        {
+            glider.ResetGlider();
+        }
+        else         
+        {
+            glider = FindAnyObjectByType<GliderMove>();
+            glider.ResetGlider();
+        }
+        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 1;
+        playerModel.SetActive(true);
         transform.rotation = Quaternion.identity;
         playerState = PlayerState.Falling;
         GetComponent<Rigidbody>().MovePosition(spawn);
@@ -65,14 +89,15 @@ public class PlayerManager : MonoBehaviour
         playerMovement.gravityPull = 0;
         playerMovement.glider = null;
         playerMovement.disableMovement = false;
-        FindAnyObjectByType<GliderMove>().ResetGlider();
-        camera.Reset();
-        GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         
+        camera.Reset();
+        rb.linearVelocity = Vector3.zero;
+
         foreach (var grapple in FindObjectsOfType<GrapplePoint>())
         {
             grapple.ResetGrapple();
         }
+        
     }
 
     public enum PlayerState
@@ -100,7 +125,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Win()
     {
-        ResetLevel();
+        
         currentLevelInFolder++;
         if (currentLevelInFolder > Resources.LoadAll($"Levels/{levelFolder}", typeof(GameObject)).Length)
         {
@@ -110,7 +135,9 @@ public class PlayerManager : MonoBehaviour
 
         Destroy(levelOn);
         levelOn = Instantiate(Resources.Load<GameObject>($"Levels/{levelFolder}/{currentLevelInFolder}"));
-        
+        glider = FindAnyObjectByType<GliderMove>();
+        StartCoroutine(ResetLevel());
+
     }
 
     public void ChangeLevelDebug(bool level,bool folder, bool test)
@@ -124,7 +151,7 @@ public class PlayerManager : MonoBehaviour
         }
         else if (test)
         {
-            ResetLevel();
+            StartCoroutine(ResetLevel());
             Destroy(levelOn);
             currentLevelInFolder = 1;
             levelFolder = 1;
@@ -144,7 +171,7 @@ public class PlayerManager : MonoBehaviour
         }
         else 
             return;
-        ResetLevel();
+        StartCoroutine(ResetLevel());
         Destroy(levelOn);
         if (levelFolder > 2)
         {
