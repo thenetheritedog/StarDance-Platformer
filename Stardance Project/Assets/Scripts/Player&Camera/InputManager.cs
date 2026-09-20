@@ -34,11 +34,11 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        Menu();
-        Glider();
+        
         if (Time.timeScale == 0) 
             return;
         Movement();
+        Menu();
         CameraMovement();
         Jump();
         Grapple();
@@ -67,13 +67,6 @@ public class InputManager : MonoBehaviour
         if (grappleAction.IsPressed())
         {
             playerMovement.GrappleStart();
-        }
-    }
-    private void Glider()
-    {
-        if (glideAction.WasPressedThisFrame())
-        {
-            playerManager.StartCoroutine(playerManager.ResetLevel());
         }
     }
     private void Menu()

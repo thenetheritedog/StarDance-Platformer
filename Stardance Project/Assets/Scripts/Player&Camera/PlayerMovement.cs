@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float grappleImpactDuration;
     private Vector3 originalGrappleDistance;
     public GameObject lockOn;
+    [SerializeField] private AudioSource jumpSFX;
 
     private void Start()
     {
@@ -54,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (grapplePoint != null)
+        if (grapplePoint != null && player.playerState != PlayerManager.PlayerState.Grapple && player.playerState != PlayerManager.PlayerState.Gliding)
         {
             lockOn.SetActive(true);
             lockOn.transform.position = Camera.main.WorldToScreenPoint(grapplePoint.transform.position);
@@ -216,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (velocity.magnitude > 0 && !disableMovement)
         {
-            transform.forward = Vector3.Lerp(rigidbody.linearVelocity, velocity, newAcceleration * Time.deltaTime).normalized;
+            transform.forward = Vector3.Lerp(Vector3.ProjectOnPlane(rigidbody.linearVelocity, Vector3.up), velocity, newAcceleration * Time.deltaTime).normalized;
         }
         else if (!disableMovement)
         {
@@ -390,7 +391,7 @@ public class PlayerMovement : MonoBehaviour
             player.animator.SetBool("Flip", isWallRunLeft);
             player.animator.SetBool("Jumping", true);
 
-
+            jumpSFX.Play();
         }
         if (jumpInput && jumpAvailable)
         {
@@ -417,7 +418,7 @@ public class PlayerMovement : MonoBehaviour
             { player.animator.SetBool("Flip", false); }
             player.animator.Play("Jump");
 
-
+            player.PlaySFXUsingRandom(jumpSFX);
         }
         if (!jumpInput && (player.playerState == PlayerManager.PlayerState.Jumping ))
         {

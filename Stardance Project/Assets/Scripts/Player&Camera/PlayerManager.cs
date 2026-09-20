@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.ProBuilder.MeshOperations;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
@@ -24,7 +25,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private GameObject levelOn;
     [SerializeField] private ParticleSystem deathParticles;
     [SerializeField] private GameObject playerModel;
-    [SerializeField] GliderMove glider;
+    [SerializeField] private GliderMove glider;
+    [SerializeField] private AudioSource deathSFX;
+    [SerializeField] Animator transitionAnimation;
 
 
     public float sensitivity;
@@ -61,8 +64,16 @@ public class PlayerManager : MonoBehaviour
         
 }
 
-    public IEnumerator ResetLevel()
+    public IEnumerator ResetLevel(bool win = false)
     {
+        animator.Play("Fall");
+        PlaySFXUsingRandom(deathSFX);
+        transitionAnimation.Play("Transition");
+
+        if (levelOn == null)
+        {
+            yield break;
+        }
         Time.timeScale = 0;
         deathParticles.Play();
         playerModel.SetActive(false);
@@ -77,7 +88,11 @@ public class PlayerManager : MonoBehaviour
             glider.ResetGlider();
         }
         yield return new WaitForSecondsRealtime(0.5f);
-        Time.timeScale = 1;
+        if (win)
+        {
+            Destroy(levelOn);
+            levelOn = Instantiate(Resources.Load<GameObject>($"Levels/{levelFolder}/{currentLevelInFolder}"));
+        }
         playerModel.SetActive(true);
         transform.rotation = Quaternion.identity;
         playerState = PlayerState.Falling;
@@ -92,6 +107,8 @@ public class PlayerManager : MonoBehaviour
         
         camera.Reset();
         rb.linearVelocity = Vector3.zero;
+        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 1;
 
         foreach (var grapple in FindObjectsOfType<GrapplePoint>())
         {
@@ -133,10 +150,16 @@ public class PlayerManager : MonoBehaviour
             levelFolder += 1;
         }
 
-        Destroy(levelOn);
-        levelOn = Instantiate(Resources.Load<GameObject>($"Levels/{levelFolder}/{currentLevelInFolder}"));
+
+        if (levelFolder > 2)
+        {
+            UnityEngine.Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("Win");
+            return;
+        }
+        
         glider = FindAnyObjectByType<GliderMove>();
-        StartCoroutine(ResetLevel());
+        StartCoroutine(ResetLevel(true));
 
     }
 
@@ -175,9 +198,14 @@ public class PlayerManager : MonoBehaviour
         Destroy(levelOn);
         if (levelFolder > 2)
         {
-            levelFolder = 1;
+            SceneManager.LoadScene("Win");
         }
         levelOn = Instantiate(Resources.Load<GameObject>($"Levels/{levelFolder}/{currentLevelInFolder}"));
     }
-    
+    public void PlaySFXUsingRandom(AudioSource sfx)
+    {         
+        sfx.pitch = Random.Range(0.95f, 1.05f);
+        sfx.volume = Random.Range(0.95f, 1.05f);
+        sfx.Play();
+    }
 }
