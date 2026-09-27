@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ public class GliderMove : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private bool gliderCollisionResetFalse;
     [SerializeField] private LayerMask resetLayers;
+    public bool canUse;
     private Rigidbody rb;
 
     private void Start()
@@ -41,7 +43,7 @@ public class GliderMove : MonoBehaviour
 
         Debug.DrawRay(transform.position, moveVector, Color.blue);
         player.transform.position = transform.position - transform.up;
-        
+        canUse = false;
         //rb.linearVelocity = transform.forward * speed;
     }
     private void FixedUpdate()
@@ -78,8 +80,14 @@ public class GliderMove : MonoBehaviour
 
         speed = baseSpeed;
         direction = spawner.transform.forward * speed;
+        canUse = true;
         transform.localPosition = Vector3.zero;
         transform.forward = Vector3.zero; 
         Debug.Log("Reset Glider");
+    }
+    public IEnumerator DelayUse()
+    {
+        yield return new WaitForSeconds(4f);
+        canUse = true;
     }
 }

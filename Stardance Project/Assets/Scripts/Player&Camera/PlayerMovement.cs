@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 originalGrappleDistance;
     public GameObject lockOn;
     [SerializeField] private AudioSource jumpSFX;
+    [SerializeField] private AudioSource grappleSFX;
 
     private void Start()
     {
@@ -75,11 +76,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         Vector3 velocity = rigidbody.linearVelocity;
-        if (player.playerState != PlayerManager.PlayerState.Grapple && player.playerState != PlayerManager.PlayerState.Gliding)
+        if (player.playerState != PlayerManager.PlayerState.Grapple)
         {
             GrappleFind();
-        } 
-        
+        }
 
         if (Physics.BoxCast(transform.position, (Vector3.one - Vector3.up * 0.85f) / 3f, -transform.up, out groundHit, transform.rotation, toGroundDis + Vector3.Project(velocity * Time.fixedDeltaTime, -transform.up).magnitude, player.defaultLayer)
             && velocity.y <= 0 && player.playerState != PlayerManager.PlayerState.Grapple)
@@ -100,6 +100,12 @@ public class PlayerMovement : MonoBehaviour
                     }
                     player.animator.Play("Run", 0, flipped);
                     disableMovement = false;
+                    if (glider != null)
+                    {
+                        
+                        glider.StartCoroutine(glider.DelayUse());
+                    }
+                    
                     glider = null;
                 }
                 player.grounded = true;
@@ -122,6 +128,10 @@ public class PlayerMovement : MonoBehaviour
                 {
                     player.grounded = true;
                     gravityPull = 0;
+                }
+                else
+                {
+                    rigidbody.linearVelocity = rigidbody.linearVelocity.z * groundHit.normal.normalized;
                 }
 
 
@@ -159,6 +169,7 @@ public class PlayerMovement : MonoBehaviour
                 Grappling();
                 break;
             case PlayerManager.PlayerState.Gliding:
+                grapplePoint = null;
                 if (glider != null)
                 {
                     rigidbody.linearVelocity = glider.GetComponent<Rigidbody>().linearVelocity;
@@ -401,8 +412,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 rigidbody.linearVelocity = glider.GetComponent<Rigidbody>().linearVelocity;
                 Vector3 changeGliderVelocity = rigidbody.linearVelocity;
-                changeGliderVelocity.y = -jumpHeight * 12;
+                changeGliderVelocity.y = -jumpHeight * 3;
                 glider.GetComponent<Rigidbody>().linearVelocity = changeGliderVelocity;
+                
+                glider.StartCoroutine(glider.DelayUse());
                 glider = null;
             }
             jumpAvailable = false;
@@ -418,7 +431,7 @@ public class PlayerMovement : MonoBehaviour
             { player.animator.SetBool("Flip", false); }
             player.animator.Play("Jump");
 
-            player.PlaySFXUsingRandom(jumpSFX);
+            PlayerManager.PlaySFXUsingRandom(jumpSFX);
         }
         if (!jumpInput && (player.playerState == PlayerManager.PlayerState.Jumping ))
         {
@@ -567,6 +580,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (grapplePoint != null)
         {
+            PlayerManager.PlaySFXUsingRandom(grappleSFX);
             player.playerState = PlayerManager.PlayerState.Grapple;
             disableMovement = true;
             player.grounded = false;
@@ -649,18 +663,27 @@ public class PlayerMovement : MonoBehaviour
         foreach (Collider target in potentialTargets)
         {
             Vector3 targetDirection = target.transform.position - transform.position;
-
+            if (target.GetComponent<GliderMove>() != null)
+            {
+                if (!target.GetComponent<GliderMove>().canUse)
+                {
+                    return;
+                }
+            }
             if (Physics.CapsuleCast(transform.position - transform.position.y * transform.up, transform.position + transform.position.y * transform.up, 0.5f, targetDirection, targetDirection.magnitude - 1, player.defaultLayer))
             {
                 return;
             }
-            if (targetDirection.magnitude > distanceAway)
+            if (player.playerState != PlayerManager.PlayerState.Grapple)
             {
-                return;
-            }
-            if (Vector3.Angle(targetDirection, player.camera.mainCamera.transform.forward) > 45)
-            {
-                return;
+                if (targetDirection.magnitude > distanceAway)
+                {
+                    return;
+                }
+                if (Vector3.Angle(targetDirection, player.camera.mainCamera.transform.forward) > 45)
+                {
+                    return;
+                }
             }
 
             distanceAway = targetDirection.magnitude;

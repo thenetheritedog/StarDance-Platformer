@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour
 {
@@ -42,8 +43,8 @@ public class InputManager : MonoBehaviour
         CameraMovement();
         Jump();
         Grapple();
-        
-        playerManager.ChangeLevelDebug(nextLevelAction.WasPressedThisFrame(), nextFolderAction.WasPressedThisFrame(), testLevelAction.WasPressedThisFrame());
+
+        //playerManager.ChangeLevelDebug(nextLevelAction.WasPressedThisFrame(), nextFolderAction.WasPressedThisFrame(), testLevelAction.WasPressedThisFrame());
     }
 
     private void Movement()

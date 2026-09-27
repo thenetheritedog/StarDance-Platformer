@@ -27,6 +27,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private GameObject playerModel;
     [SerializeField] private GliderMove glider;
     [SerializeField] private AudioSource deathSFX;
+    [SerializeField] private AudioSource winSFX;
     [SerializeField] Animator transitionAnimation;
 
 
@@ -44,6 +45,7 @@ public class PlayerManager : MonoBehaviour
         Time.fixedDeltaTime = 1f / 60f;
         glider = FindAnyObjectByType<GliderMove>();
         rb = GetComponent<Rigidbody>();
+        StartCoroutine(ResetLevel(false, true));
 
 
 
@@ -64,30 +66,53 @@ public class PlayerManager : MonoBehaviour
         
 }
 
-    public IEnumerator ResetLevel(bool win = false)
+    public IEnumerator ResetLevel(bool win = false, bool startAnimation = false)
     {
+        if (startAnimation)
+        {
+            Time.timeScale = 0;
+            yield return new WaitForEndOfFrame();
+        }
         animator.Play("Fall");
-        PlaySFXUsingRandom(deathSFX);
-        transitionAnimation.Play("Transition");
-
-        if (levelOn == null)
-        {
-            yield break;
-        }
+        //transitionAnimation.gameObject.GetComponent<RectTransform>().position = new Vector3(0, 950.7f, 0);
+        transitionAnimation.Play("Transition", 0, startAnimation ? 0.5f : 0.0f);
         Time.timeScale = 0;
-        deathParticles.Play();
-        playerModel.SetActive(false);
-        playerMovement.lockOn.transform.localScale = Vector3.zero;
-        if (glider != null)
+        if (!startAnimation)
         {
-            glider.ResetGlider();
+            if (win)
+            {
+                PlaySFXUsingRandom(winSFX);
+            }
+            else
+            {
+                PlaySFXUsingRandom(deathSFX);
+            }
+            deathParticles.Play();
+            playerModel.SetActive(false);
+            playerMovement.lockOn.transform.localScale = Vector3.zero;
+            if (glider != null)
+            {
+                glider.ResetGlider();
+            }
+            else
+            {
+                glider = FindAnyObjectByType<GliderMove>();
+                glider.ResetGlider();
+            }
+            if (levelOn == null)
+            {
+                yield break;
+            }
+            yield return new WaitForSecondsRealtime(0.3f);
+
+
         }
-        else         
-        {
-            glider = FindAnyObjectByType<GliderMove>();
-            glider.ResetGlider();
-        }
-        yield return new WaitForSecondsRealtime(0.5f);
+        
+
+
+
+
+
         if (win)
         {
             Destroy(levelOn);
@@ -104,8 +129,10 @@ public class PlayerManager : MonoBehaviour
         playerMovement.gravityPull = 0;
         playerMovement.glider = null;
         playerMovement.disableMovement = false;
-        
-        camera.Reset();
+        if (camera != null)
+        {
+            camera.Reset();
+        }
         rb.linearVelocity = Vector3.zero;
         yield return new WaitForSecondsRealtime(0.5f);
         Time.timeScale = 1;
@@ -114,6 +141,7 @@ public class PlayerManager : MonoBehaviour
         {
             grapple.ResetGrapple();
         }
+        
         
     }
 
@@ -154,7 +182,7 @@ public class PlayerManager : MonoBehaviour
         if (levelFolder > 2)
         {
             UnityEngine.Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene("Win");
+            StartCoroutine(FinalWin());
             return;
         }
         
@@ -202,10 +230,17 @@ public class PlayerManager : MonoBehaviour
         }
         levelOn = Instantiate(Resources.Load<GameObject>($"Levels/{levelFolder}/{currentLevelInFolder}"));
     }
-    public void PlaySFXUsingRandom(AudioSource sfx)
+    public static void PlaySFXUsingRandom(AudioSource sfx)
     {         
         sfx.pitch = Random.Range(0.95f, 1.05f);
         sfx.volume = Random.Range(0.95f, 1.05f);
         sfx.Play();
+    }
+
+
+    private IEnumerator FinalWin()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        SceneManager.LoadScene("Win");
     }
 }
