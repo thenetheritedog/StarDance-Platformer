@@ -118,7 +118,7 @@ MonoBehaviour:
   instancePrefab: {fileID: 2046433964935357512}
   baseSpeed: 13.6
   speed: 15.8
-  turnSpeed: 2.09
+  turnSpeed: 5.89
   gravity: 2.62
   direction: {x: 0, y: 0, z: 0}
   slowDown: 1.33
@@ -127,6 +127,7 @@ MonoBehaviour:
   resetLayers:
     serializedVersion: 2
     m_Bits: 257
+  canUse: 1
 --- !u!33 &-1445751409229876028
 MeshFilter:
   m_ObjectHideFlags: 0

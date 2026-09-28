@@ -528,7 +528,7 @@ MonoBehaviour:
   disableMovement: 0
   grapplePoint: {fileID: 0}
   gravityPull: 0
-  grappleRadius: 14.3
+  grappleRadius: 21.8
   grappleLayer:
     serializedVersion: 2
     m_Bits: 64

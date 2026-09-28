@@ -80,9 +80,10 @@ public class GliderMove : MonoBehaviour
 
         speed = baseSpeed;
         direction = spawner.transform.forward * speed;
+        rb.linearVelocity = direction;
         canUse = true;
         transform.localPosition = Vector3.zero;
-        transform.forward = Vector3.zero; 
+        transform.forward = direction.normalized; 
         Debug.Log("Reset Glider");
     }
     public IEnumerator DelayUse()
