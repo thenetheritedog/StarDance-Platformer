@@ -17,6 +17,7 @@ There may be bugs in game that were not properly taken care of or left in. Any a
 ## History:
 
 This game started off 2 months ago when I discovered Stardance and after a bit of tinkering with what game mechanics I wanted I settled on managing how to use your glider along side some grappling. Previous ideas involved having momentum or gliding with some cool physics but were scrapped for being too hard. The only hiccup I encountered was dealing with school so there are only 7 levels. However I may update this game with more. Please appreciate the renders I worked very hard on them. 
+
 <img width="640" height="360" alt="Title" src="https://github.com/user-attachments/assets/22ffbaa2-4689-4517-bbbe-d9af22e7db56" />
 
 ## Controls:
@@ -34,4 +35,5 @@ Along side basic controls there is grappling, gliding, wall running, wall slidin
 ## Information about how game is made:
 
 There are a lot of things that went into the game and how it works. Personally I'd recommend looking through the code included.
+
 <img width="640" height="360" alt="Win" src="https://github.com/user-attachments/assets/349e0549-073c-413b-b590-2f5711abadd3" />
