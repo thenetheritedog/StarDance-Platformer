@@ -9,7 +9,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="VisualElement" style="flex-grow: 1; margin-top: 182px;" />
         <ui:VisualElement name="BUTTONS" style="flex-grow: 1; margin-top: -3px; margin-right: -3px; margin-bottom: -3px; margin-left: -3px; flex-direction: row; align-items: auto; justify-content: space-evenly; align-content: flex-start; align-self: stretch; border-top-width: -20px; border-right-width: -20px; border-bottom-width: -20px; border-left-width: -20px; background-color: rgba(255, 255, 255, 0); flex-wrap: nowrap; -unity-text-outline-width: 9px; -unity-text-outline-color: rgb(0, 0, 0); padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-top-left-radius: 42px; border-top-right-radius: 42px; border-bottom-right-radius: 42px; border-bottom-left-radius: 42px; height: 0%;">
-            <ui:Button text="QUIT" name="Quit" class="unity-button" style="flex-direction: row;" />
+            <ui:Button text="QUIT" name="Quit" language-direction="Inherit" class="unity-button" style="flex-direction: row; position: absolute; top: 30px; right: -1003px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

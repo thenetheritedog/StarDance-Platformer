@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/StyleSheet.uss?fileID=7433441132597879392&amp;guid=84c47ccf9ebd38f43a435d9e2ab2b2f8&amp;type=3#StyleSheet" />
     <ui:VisualElement style="flex-grow: 1; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(135, 135, 135, 0.54);">
+        <ui:Button text="Quit" name="Quit" class="unity-button" style="position: absolute; top: -753px;" />
         <ui:VisualElement name="ContLayer" style="flex-grow: 1; border-top-color: rgba(0, 0, 0, 0); border-top-width: 22px; border-right-width: 451px; border-bottom-width: 22px; border-left-width: 451px; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
             <ui:Label text="Pause Menu" class="text" style="justify-content: flex-start; align-items: center; align-content: auto; align-self: center; flex-grow: 1; flex-direction: column; flex-shrink: 1; min-width: 100%; -unity-text-align: middle-center; font-size: 107px; background-color: rgba(0, 0, 0, 0.18); border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px;" />
             <ui:Slider label="Sensitivity" value="0.3" high-value="0.6" name="Sens" low-value="0.1" direction="Horizontal" class="slider text" style="cursor: initial; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; background-color: rgba(0, 0, 0, 0.18);" />
@@ -11,7 +12,6 @@
             </ui:VisualElement>
             <ui:VisualElement name="Buttons" style="flex-grow: 1; flex-direction: row; justify-content: space-around; -unity-background-image-tint-color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0); border-top-width: 15px; border-right-width: 15px; border-bottom-width: 15px; border-left-width: 15px; border-top-left-radius: 46px; border-top-right-radius: 46px; border-bottom-right-radius: 46px; border-bottom-left-radius: 46px; transform-origin: center; align-items: auto; -unity-text-align: middle-left; align-self: stretch; align-content: auto; max-width: none; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
                 <ui:Button text="Return" name="Return" class="unity-button" />
-                <ui:Button text="Quit" name="Quit" class="unity-button" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
